@@ -43,7 +43,6 @@ for exemple:
 ```bash
 debup add fastfetch-cli/fastfetch
 ```
-* *Optional: Add repository also with entire Releases Page adress.*
 
 **List tracked repositories**
 ```bash
