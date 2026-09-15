@@ -66,6 +66,8 @@ or
 ```bash
 debup upgrade <package-name>
 ```
+>
+>**💡 Tip:** Combine official repos and GitHub releases by aliasing `sudo apt update && sudo apt upgrade -y && debup upgrade` in your `~/.bashrc`.
 
 ---
 
