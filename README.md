@@ -66,6 +66,8 @@ debup upgrade
 or 
 ```bash
 debup upgrade <package-name>
+```
+
 ---
 
 ## ✨ Highlights
