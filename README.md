@@ -63,7 +63,9 @@ debup update
 ```bash
 debup upgrade
 ```
-
+or 
+```bash
+debup upgrade <package-name>
 ---
 
 ## ✨ Highlights
@@ -92,7 +94,7 @@ apt remove debup
 ```
 **Remove package and clean configuration**
 ```bash
-sudo apt purge debup
+sudo apt --purge debup
 ```
 
 ---
