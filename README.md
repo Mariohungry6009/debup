@@ -1,16 +1,101 @@
-# debup
-Debup – A command-line (CLI) DEB package manager for Debian- and Ubuntu-based distributions. Add a Git repository, check for new versions, and perform updates or installations via APT.
+<p align="center">
+<img src="https://api.iconify.design/lucide:package-check.svg?color=%23d70a53&width=130&height=130" alt="debup logo" />
+</p>
 
-for help type 'debup'
+<h1 align="center">debup</h1>
 
-Usage
+<p align="center">
+<b>The Obtainium-like CLI package manager for Debian & Ubuntu.</b><br>
+Track, install, and upgrade<code>.deb</code> packages directly from GitHub Releases.
+</p>
 
-debup add owner/repo or url.          Install and track a GitHub deb package
+<p align="center">
+<ahref="LICENSE"><img src="https://img.shields.io/badge/License-GPLv3-blue.svg"alt="License: GPL v3"></a>
+<a href="https://debian.org"><img src="https://img.shields.io/badge/Platform-Debian%20%7C%20Ubuntu-red.svg" alt="Platform"></a>
+<a href="https://www.gnu.org/software/bash/"><img src="https://img.shields.io/badge/Language-Bash-4EAA25.svg" alt="Language"></a>
+<a href="https://github.com/Uraam/debup/releases"><img src="https://img.shields.io/github/v/release/Uraam/debup?color=brightgreen" alt="Release"></a>
+</p>
 
-debup update                          Check if update available
+---
 
-debup upgrade [-y]                    Check and upgrade all tracked packages
+# 📦 debup
 
-debup list                            List all tracked packages
+**debup** is a lightweight, zero-bloat CLI package manager for Debian and Ubuntu-based systems. Inspired by Android's **Obtainium**, it tracks, installs, and updates `.deb` packages directly from official **GitHub Releases**.
 
-debup remove <package_name>           Untrack (and optionally purge) a package
+No PPAs, no bloated sandboxes, no third-party repositories—just native `.deb` binaries fetched straight from upstream.
+
+---
+
+##⚡ Quick First Install
+```bash
+curl -fsSL https://github.com/Uraam/debup/releases/latest/download/debup_2.0.0_all.deb -o /tmp/debup.deb && sudo apt install -y /tmp/debup.deb && rm -f /tmp/debup.deb
+```
+
+## 🛠️ Usage
+
+### Package Management
+
+**Add a repository to track:**
+```bash
+debup add <owner>/<repo>
+```
+for exemple:
+```bash
+debup add fastfetch-cli/fastfetch
+```
+* *Optional: Add repository also with entire Releases Page adress.*
+
+**List tracked repositories**
+```bash
+debup list
+```
+**Remove a tracked repository**
+```bash
+debup remove <package-name>
+```
+
+### Package Updates/Upgrade
+**Check for available updates**
+```bash
+debup update 
+```
+**Download and upgrade tracked packages**
+```bash
+debup upgrade
+```
+
+---
+
+## ✨ Highlights
+
+- **Native Workflow:** Standard `add`, `list`, `remove`, `update`, and `upgrade` syntax.
+- **Architecture Aware:** Automatically detects CPU architecture (`amd64`, `arm64`, `all`).
+- **Self-Updating:** Automatically tracks and updates itself via `debup`.
+- **Dependency Handling:** Leverages native `apt` under the hood to resolve package dependencies.
+
+---
+
+## ⚙️ Configuration
+
+**Tracked sources are stored in:**
+```bash
+/etc/debup/sources.list
+```
+**Format:**
+```bash
+<package-name>|<github-user>/<github-repo>
+```
+## 🗑️ Uninstallation
+**Remove package sudo**
+```bash
+apt remove debup 
+```
+**Remove package and clean configuration**
+```bash
+sudo apt purge debup
+```
+---
+
+##📄 License
+
+This project is licensed under the [GNU General Public License v3.0](LICENSE).
