@@ -182,7 +182,7 @@ shift
 done
 
 if [ ! -f "$SOURCES_FILE" ] || [ ! -s "$SOURCES_FILE" ]; then
-echo "No packages managed by debup yet."
+echo -e "${YELLOW}[!] No packages managed by debup yet.${NC}"
 exit 0
 fi
 
@@ -196,11 +196,11 @@ done < "$SOURCES_FILE"
 
 list)
 if [ ! -f "$SOURCES_FILE" ] || [ ! -s "$SOURCES_FILE" ]; then
-echo "No packages registered."
+echo "${YELLOW}[!] No packages registered.${NC}"
 exit 0
 fi
-printf "%-25s %s\n" "PACKAGE" "REPOSITORY"
-printf "%-25s %s\n" "-------" "----------"
+printf "%-25s %s\n" "${CYAN}PACKAGE${NC}" "${CYAN}REPOSITORY${NC}"
+printf "%-25s %s\n" "${BLUE}-------${NC}" "${BLUE}----------${NC}"
 while IFS='|' read -r pkg repo || [ -n "$pkg" ];do
 [[ "$pkg" =~ ^#.* ]] && continue
 [ -z "$pkg" ] && continue
@@ -210,7 +210,7 @@ done <"$SOURCES_FILE"
 
 remove)
 PKG="$2"
-[ -z "$PKG" ] && { echo "Usage: debup remove <package_name>"; exit 1; }
+[ -z "$PKG" ] && { echo "${YELLOW}[!] Usage: debup remove${NC} <package_name>"; exit 1; }
 if [ -f "$SOURCES_FILE" ]; then
 sudo sed -i "/^${PKG}|/d" "$SOURCES_FILE"
 printf "%b\n" "${GREEN}[✓] ${PKG} removed from debup tracking.${NC}"
@@ -222,12 +222,12 @@ fi
 ;;
 
 help|--help|-h|*)
-echo "Debup - GitHub DEB Package Manager"
+echo -e "${CYAN}Debup - GitHub DEB Package Manager${NC}"
 echo ""
-echo "Usage:"
-echo "debup add [-y] <owner/repo|url>         Install and track a GitHub deb package"
-echo "  debup upgrade [-y]                    Check and upgrade all tracked packages"
-echo "  debup list                            List all tracked packages"
-echo "  debup remove <package_name>           Untrack (and optionally purge) a package"
+echo "${CYAN}Usage:"
+echo "${CYAN}debup add [-y] <owner/repo|url>${NC}         Install and track a GitHub deb package"
+echo "  ${CYAN}debup upgrade [-y]                    Check and upgrade all tracked packages"
+echo "  ${CYAN}debup list                            List all tracked packages"
+echo "  ${CYAN}debup remove <package_name>           Untrack (and optionally purge) a package"
 ;;
 esac
