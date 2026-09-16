@@ -122,13 +122,13 @@ debup remove <package-name>
 ```
 
 ### Package Updates/Upgrade
-**Check for available updates** (optional - for information only)
-```bash
-debup update 
-```
 **Download and upgrade tracked packages with onfirmation**
 ```bash
-debup upgrade
+debup upgrade 
+```
+skip confirmation
+```bash
+debup upgrade -y
 ```
 or 
 ```bash
