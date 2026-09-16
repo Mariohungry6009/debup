@@ -2,10 +2,10 @@
 <img src="https://api.iconify.design/lucide:package-check.svg?color=%23d70a53&width=130&height=130" alt="debup logo" />
 </p>
 
-<h1 align="center">debup</h1> <a href="#">
+<h1 align="center">debup</h1>
 
 <p align="center">
-The Obtainium-like CLI package manager for Debian & Ubuntu-based distributions.
+<strong><b>The Obtainium-like CLI package manager for Debian & Ubuntu-based distributions.<strong><br>
 Track, install, and upgrade `.deb` packages directly from GitHub Releases.
 </p>
 
