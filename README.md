@@ -58,7 +58,7 @@ debup remove <package-name>
 ```bash
 debup update 
 ```
-**Download and upgrade tracked packages**
+**Download and upgrade tracked packages with onfirmation**
 ```bash
 debup upgrade
 ```
