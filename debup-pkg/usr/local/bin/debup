@@ -154,7 +154,6 @@ return 1
 fi
 }
 
-# --- CLI ROUTER ---
 case "$1" in
 add|install)
 shift
