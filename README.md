@@ -6,7 +6,7 @@
 
 <p align="center">
 <b>The Obtainium-like CLI package manager for Debian/Ubuntu-based distributions.</b><br>
-Track, install, and upgrade<code>.deb</code> packages directly from GitHub Releases.
+Track, install, and upgrade<code>.deb</code> packages directly from GitHub Releases on all architectures.
 </p>
 
 <p align="center">
