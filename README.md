@@ -62,10 +62,13 @@ chmod 755 debup-pkg/usr/local/bin/debup
 dpkg-deb --build --root-owner-group debup-pkg debup.deb
 ```
 4. **Install it:**
+Via Apt (recommended for dependancies):
 ```bash
 sudo apt install -y ./debup.deb
 ```
 or
+
+Via dpkg:
 ```bash
 sudo dpkg -i debup.deb
 ```
