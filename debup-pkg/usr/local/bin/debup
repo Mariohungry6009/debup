@@ -125,6 +125,7 @@ fi
 fi
 
 local tmp_deb="/tmp/debup_${remote_ver}_${ARCH}.deb"
+trap 'rm -f "$tmp_deb"' INT TERM EXIT
 
 printf "%b\n" "${CYAN}[*] Downloading: ${deb_url}${NC}"
 if ! curl -L --progress-bar -o "$tmp_deb" "$deb_url"; then
