@@ -59,6 +59,11 @@ dpkg-deb --build --root-owner-group debup-pkg debup.deb
 ```bash
 sudo apt install -y ./debup.deb
 ```
+or
+```bash
+sudo dpkg -i debup.deb
+```
+
 To uninstall cleanly later:
 ```bash
 sudo apt remove --purge debup
