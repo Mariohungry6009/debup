@@ -107,6 +107,11 @@ apt remove debup
 ```bash
 sudo apt --purge debup
 ```
+## Screenshoots
+<p align="center">
+<img src="/assets/debup_1.png" width="400"> <img src="/assets/debup_2.png" width="400"> <img src="/assets/debup3.png" width="400"> <img src="/assets/debup4.png" width="400">
+
+
 
 ---
 
