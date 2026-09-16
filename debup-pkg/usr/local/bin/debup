@@ -97,7 +97,7 @@ printf "%b\n" "${BLUE}==>${NC} Package: ${CYAN}${PKG_NAME:-New package}${NC} (${
 printf "%b\n" "${YELLOW}Current version:${NC} ${local_ver:-Not installed}"
 printf "%b\n" "${GREEN}Latest version:${NC}  ${remote_ver}"
 
-if [ -n "$local_ver" ] && [ "$local_ver" = "$remote_ver" ]; then
+if [ -n "$local_ver" ] && dpkg --compare-versions "$local_ver" ge "$remote_ver"; then
 printf "%b\n" "${GREEN}[✓] Package is already up to date!${NC}\n"
 return 0
 fi
