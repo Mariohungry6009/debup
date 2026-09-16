@@ -85,13 +85,13 @@ debup upgrade <package-name>
 ## ⚙️ Configuration
 
 **Tracked sources are stored in:**
-```bash
-/etc/debup/sources.list
-```
+
+`/etc/debup/sources.list`
+
 **Format:**
-```bash
-<package-name>|<github-user>/<github-repo>
-```
+
+`<package-name>|<github-user>/<github-repo>`
+
 ## 🗑️ Uninstallation
 **Remove package sudo**
 ```bash
