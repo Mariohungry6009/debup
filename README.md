@@ -10,10 +10,16 @@ Track, install, and upgrade<code>.deb</code> packages directly from GitHub Relea
 </p>
 
 <p align="center">
-<ahref="LICENSE"><img src="https://img.shields.io/badge/License-GPLv3-blue.svg"alt="License: GPL v3"></a> &nbsp; 
+<a href="LICENSE"><img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="GPL v3"></a> &nbsp;
 <a href="https://debian.org"><img src="https://img.shields.io/badge/Platform-Debian%20%7C%20Ubuntu-red.svg" alt="Platform"></a> &nbsp;
-<a href="https://www.gnu.org/software/bash/"><img src="https://img.shields.io/badge/Language-Bash-4EAA25.svg" alt="Language"></a> &nbsp;
-<a href="https://github.com/Uraam/debup/releases"><img src="https://img.shields.io/github/v/release/Uraam/debup?color=brightgreen" alt="Release"></a>
+<a href="#"><img src="https://img.shields.io/badge/Arch-all%20(any)-orange.svg" alt="Arch"></a> &nbsp;
+<a href="https://www.gnu.org/software/bash/"><img src="https://img.shields.io/badge/Language-Bash-4EAA25.svg" alt="Bash"></a>
+</p>
+
+<p align="center">
+<a href="https://github.com/Uraam/debup/releases"><img src="https://img.shields.io/github/v/release/Uraam/debup?color=brightgreen" alt="Release"></a> &nbsp;
+<a href="#"><img src="https://img.shields.io/badge/Package_Size-3.41_Ko-success.svg" alt="Size"></a> &nbsp;
+<a href="https://github.com/Uraam/debup/releases"><img src="https://img.shields.io/github/downloads/Uraam/debup/total?color=blueviolet" alt="Total Downloads"></a>
 </p>
 
 ---
