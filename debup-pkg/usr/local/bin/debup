@@ -32,11 +32,11 @@ ARCH=$(dpkg --print-architecture 2>/dev/null || echo "amd64")
 
 init_storage() {
 if [ ! -d "$CONF_DIR" ]; then
-sudo mkdir -p "$CONF_DIR 2>/dev/null" || sudo mkdir -p "$CONF_DIR"
+sudo mkdir -p "$CONF_DIR" 2>/dev/null || sudo mkdir -p "$CONF_DIR"
 fi
 
 if [ ! -f "$SOURCES_FILE" ]; then
-touch "$SOURCES_FILE" 2>/dev/null || sudo touch touch "$SOURCES_FILE"
+touch "$SOURCES_FILE" 2>/dev/null || sudo touch "$SOURCES_FILE"
 chmod 644 "$SOURCES_FILE" || sudo chmod 644 "$SOURCES_FILE"
 fi
 }
@@ -111,7 +111,7 @@ fi
 
 if [ "$ASSUME_YES" != "true" ]; then
 printf "%b" "${YELLOW}[?] Do you want to download and install it? [y/N]: ${NC}"
-read -r confirm
+read -r confirm </dev/tty
 if [[ ! "$confirm" =~ ^[yY]$ ]]; then
 printf "%b\n" "${RED}[X] Operation canceled.${NC}\n"
 return 0
@@ -209,7 +209,7 @@ if [ -f "$SOURCES_FILE" ]; then
 sudo sed -i "/^${PKG}|/d" "$SOURCES_FILE"
 printf "%b\n" "${GREEN}[✓] ${PKG} removed from debup tracking.${NC}"
 fi
-read -rp "Do you also want to purge the package from the system using apt?[y/N]: " del_sys
+read -rp "Do you also want to purge the package from the system using apt?[y/N]: " del_sys </dev/tty
 if [[ "$del_sys" =~ ^[yY]$ ]]; then
 sudo apt-get remove --purge -y "$PKG"
 fi
