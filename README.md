@@ -37,6 +37,32 @@ No PPAs, no bloated sandboxes, no third-party repositories - just native `.deb` 
 curl -fsSL https://github.com/Ruraam/debup/releases/latest/download/debup_2.0.1_all.deb -o /tmp/debup.deb && sudo apt install -y /tmp/debup.deb && rm -f /tmp/debup.deb
 ```
 
+## 🛠️ Build it yourself from source
+
+***If you prefer to inspect the source code and build the `.deb` package manually:***
+
+1. **Clone the repository:**
+```bash
+git clone https://github.com/Ruraam/debup.git
+cd debup
+```
+2. **Ensure proper file permissions:**
+```bash
+chmod 755 debup-pkg/DEBIAN/postinst debup-pkg/DEBIAN/postrm
+chmod 755 debup-pkg/usr/local/bin/debup
+```
+3. **Build the `.deb` package:**
+```bash
+dpkg-deb --build debup-pkg debup.deb
+```
+4. **Install it:**
+```bash
+sudo dpkg -i debup.deb
+```
+To uninstall cleanly later:sudo apt remove --purge debup
+
+---
+
 ## 🛠️ Usage
 
 ### Package Management
