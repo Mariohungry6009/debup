@@ -94,7 +94,7 @@ debup remove <package-name>
 ```
 
 ### Package Updates/Upgrade
-**Check for available updates** (optional - for user informations)
+**Check for available updates** (optional - for information only)
 ```bash
 debup update 
 ```
