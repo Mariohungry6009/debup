@@ -85,6 +85,7 @@ sudo apt remove --purge debup
 By default, GitHub limits unauthenticated requests to 60 per hour. If you track many packages or encounter rate-limit errors, you can provide a GitHub Personal Access Token (classic withno special scopes needed, or fine-grained with public access).
 
 **Set it in your shell environment:**
+
 *Temporary (current session)*
 ```bash
 export GITHUB_TOKEN="ghp_your_personal_access_token"
