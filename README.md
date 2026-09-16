@@ -24,7 +24,8 @@ Track, install, and upgrade <code>.deb</code> packages directly from GitHub Rele
 
 ---
 
-# 📦 debup
+# debup <img src="https://api.iconify.design/lucide:package-check.svg?color=%23d70a53&width=30&height=30" alt="debup logo" />
+</p> 
 
 **debup** is a lightweight, zero-bloat CLI package manager for Debian and Ubuntu-based systems. Inspired by Android's **Obtainium**, it tracks, installs, and updates `.deb` packages directly from official **GitHub Releases** on **all architectures**.
 
