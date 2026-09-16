@@ -2,16 +2,16 @@
 <img src="https://api.iconify.design/lucide:package-check.svg?color=%23d70a53&width=130&height=130" alt="debup logo" />
 </p>
 
-<h1 align="center">debup</h1> <a href="#"><img src="https://img.shields.io/badge/Works_on-Debian_%7C_Ubuntu_%7C_Mint_%7C_RPi-red.svg" alt="Distros"></a>
+<h1 align="center">debup</h1> <a href="#">
 
 <p align="center">
-<b>The Obtainium-like CLI package manager for Debian & Ubuntu-based distributions.</b><br>
-Track, install, and upgrade<code>.deb</code> packages directly from GitHub Releases.
+The Obtainium-like CLI package manager for Debian & Ubuntu-based distributions.
+Track, install, and upgrade `.deb` packages directly from GitHub Releases.
 </p>
 
 <p align="center">
 <a href="LICENSE"><img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="GPL v3"></a> &nbsp;
-<a href="https://debian.org"><img src="https://img.shields.io/badge/Platform-Debian%20%7C%20Ubuntu%20%7C%20red.svg" alt="Platform"></a> &nbsp; 
+<a href="https://debian.org"><img src="https://img.shields.io/badge/Platform-Debian%20%7C%20Ubuntured.svg" alt="Platform"></a> &nbsp;
 <a href="#"><img src="https://img.shields.io/badge/Arch-all%20(any)-orange.svg" alt="Arch"></a> &nbsp;
 <a href="https://www.gnu.org/software/bash/"><img src="https://img.shields.io/badge/Language-Bash-4EAA25.svg" alt="Bash"></a>
 </p>
