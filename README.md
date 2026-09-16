@@ -53,13 +53,16 @@ chmod 755 debup-pkg/usr/local/bin/debup
 ```
 3. **Build the `.deb` package:**
 ```bash
-dpkg-deb --build debup-pkg debup.deb
+dpkg-deb --build --root-owner-group debup-pkg debup.deb
 ```
 4. **Install it:**
 ```bash
-sudo dpkg -i debup.deb
+sudo apt install -y ./debup.deb
 ```
-To uninstall cleanly later:sudo apt remove --purge debup
+To uninstall cleanly later:
+```bash
+sudo apt remove --purge debup
+```
 
 ---
 
