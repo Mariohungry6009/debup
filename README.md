@@ -125,13 +125,8 @@ debup upgrade
 ```
 skip confirmation
 ```bash
-debup upgrade -y
+debup upgrade
 ```
-or 
-```bash
-debup upgrade <package-name>
-```
-
 ## 🔍 Search & Install Packages (`debup search`) 
 
 Find any GitHub project providing .deb packages compatible with your architecture and install it in one click:
