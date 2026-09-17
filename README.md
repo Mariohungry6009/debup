@@ -6,7 +6,7 @@
 
 <p align="center">
 <strong>The Obtainium-like CLI package manager for Debian & Ubuntu distributions.</strong><br>
-Track, install, and upgrade <code>.deb</code> packages directly from GitHub Releases.
+Search, track, install, and upgrade <code>.deb</code> packages directly from GitHub Releases.
 </p>
 
 <p align="center">
@@ -30,7 +30,7 @@ debup <img src="https://api.iconify.design/lucide:package-check.svg?color=%23d70
 
 </p> 
 
-**debup** is a lightweight, zero-bloat CLI package manager for Debian and Ubuntu-based systems. Inspired by Android's **Obtainium**, it tracks, installs, and updates `.deb` packages directly from official **GitHub Releases** on **all architectures**.
+**debup** is a lightweight, zero-bloat CLI package manager for Debian and Ubuntu-based systems. Inspired by Android's **Obtainium**, it search, tracks, installs, and updates `.deb` packages directly from official **GitHub Releases** on **all architectures**.
 
 No PPAs, no bloated sandboxes, no third-party repositories - just native `.deb` binaries fetched straight from upstream.
 
