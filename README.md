@@ -5,7 +5,7 @@
 <h1 align="center">debup</h1>
 
 <p align="center">
-<strong>The Obtainium-like CLI package manager for Debian & Ubuntu distributions.</strong><br>
+<strong>The Obtainium-like CLI package manager for Debian/Ubuntu-based distributions, WSL, Android Linux Terminal.</strong><br>
 Search, track, install, and upgrade <code>.deb</code> packages directly from GitHub Releases.
 </p>
 
