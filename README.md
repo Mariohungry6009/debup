@@ -85,7 +85,6 @@ sudo apt remove --purge debup
 By default, GitHub limits anonymous requests to 60 requests/hour. Adding a token increases this limit to 5000 requests/hour.
 
 **1.Generate a token:**
-
 Go to GitHub > Settings > Developer settings > Personal access tokens > Tokens (classic) > Generate new token (no scopes/permissions needed, leave everything unchecked).
 
 **2.Link it to debup:**
@@ -101,7 +100,6 @@ Paste your token and confirm. That's it!
 ## 🛠️ Usage
 
 ### Package Management
-
 **Add a repository to track:**
 ```bash
 debup add <owner>/<repo>
@@ -133,6 +131,17 @@ or
 ```bash
 debup upgrade <package-name>
 ```
+
+## 🔍 Search & Install Packages (`debup search`) 
+
+Find any GitHub project providing .deb packages compatible with your architecture and install it in one click:
+```bash
+debup search <keyword>
+```
+### Example: debup search fastfetch
+**How it works:**
+
+Enter the package number from the list and press Enter. debup downloads the matching .deb, installs it via apt, and automatically adds it to your tracking list for future updates.
 
 ---
 >|
