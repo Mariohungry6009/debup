@@ -163,13 +163,11 @@ Enter the package number from the list and press Enter. debup downloads the matc
 
 ## ⚙️ Configuration
 
-**Tracked sources are stored in:**
+**Tracked sources are stored in:** `/etc/debup/sources.list`
 
-`/etc/debup/sources.list`
+**Format:** `<package-name>|<github-user>/<github-repo>`
 
-**Format:**
-
-`<package-name>|<github-user>/<github-repo>`
+**Github Token is stored in:** `/etc/debup/debup.conf`
 
 ## 🗑️ Uninstallation
 **Remove package sudo**
