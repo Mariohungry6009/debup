@@ -154,9 +154,9 @@ Enter the package number from the list and press Enter. debup downloads the matc
 
 ## ✨ Highlights
 
-- **Native Workflow:** Standard `add`, `list`, `remove`, `update`, and `upgrade` syntax.
+- **Native Workflow:** Standard `search` `add`, `list`, `remove`, `update`, and `upgrade` syntax.
 - **Architecture Aware:** Automatically detects CPU architecture (`amd64`, `arm64`, `all`).
-- **Self-Updating:** Automatically tracks and updates itself via `debup`.
+- **Self-Updating:** Automatically tracks and updates it self via `debup upgrade`.
 - **Dependency Handling:** Leverages native `apt` under the hood to resolve package dependencies.
 
 ---
