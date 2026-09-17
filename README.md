@@ -80,21 +80,20 @@ sudo apt remove --purge debup
 ```
 ---
 
-### GitHub API Rate Limits (Optional)
+### 🔑 Configure a GitHub Token (`debup auth`)
 
-By default, GitHub limits unauthenticated requests to 60 per hour. If you track many packages or encounter rate-limit errors, you can provide a GitHub Personal Access Token (classic withno special scopes needed, or fine-grained with public access).
+By default, GitHub limits anonymous requests to 60 requests/hour. Adding a token increases this limit to 5000 requests/hour.
 
-**Set it in your shell environment:**
+**1.Generate a token:**
 
-*Temporary (current session)*
+Go to GitHub > Settings > Developer settings > Personal access tokens > Tokens (classic) > Generate new token (no scopes/permissions needed, leave everything unchecked).
+
+**2.Link it to debup:**
 ```bash
-export GITHUB_TOKEN="ghp_your_personal_access_token"
+debup auth
 ```
-*Permanent*
-```bash
-echo 'export GITHUB_TOKEN="ghp_your_personal_access_token"' >> ~/.bashrc
-source ~/.bashrc
-```
+Paste your token and confirm. That's it!
+
 `debup` will automatically detect and use it, boosting your limit to 5,000 requests per hour.
 
 ---
