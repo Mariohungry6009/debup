@@ -174,6 +174,7 @@ Enter the package number from the list and press Enter. debup downloads the matc
 ```bash
 debup remove debup [-y]
 ```
+or
 Prompted for purge configuration or not.
 ```bash
 sudo apt remove debup 
