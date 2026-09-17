@@ -143,6 +143,9 @@ debup search <keyword>
 
 Enter the package number from the list and press Enter. debup downloads the matching .deb, installs it via apt, and automatically adds it to your tracking list for future updates.
 
+<p align="center">
+<img src="/assets/debup_search.png" width="200"></p>
+
 ---
 >|
 >**💡 Tip:** Combine official repos and GitHub releases by aliasing `sudo apt update && sudo apt upgrade -y && debup upgrade` in your `~/.bashrc`.
@@ -179,9 +182,7 @@ sudo apt --purge debup
 ```
 ## Screenshoots
 <p align="center">
-<img src="/assets/debup_1.png" width="400"> <img src="/assets/debup_2.png" width="400"> <img src="/assets/debup3.png" width="400"> <img src="/assets/debup4.png" width="400">
-
-
+<img src="/assets/debup_1.png" width="400"> <img src="/assets/debup_2.png" width="400"> <img src="/assets/debup3.png" width="400"> <img src="/assets/debup4.png" width="400"></p>
 
 ---
 
