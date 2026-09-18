@@ -102,36 +102,36 @@ Paste your token and confirm. That's it!
 ### Package Management
 **Add a repository to install `.deb` & track:**
 ```bash
-debup add <owner>/<repo>
+dbp add <owner>/<repo>
 ```
 for exemple:
 ```bash
-debup add fastfetch-cli/fastfetch
+dbp add fastfetch-cli/fastfetch
 ```
 
 **List tracked repositories**
 ```bash
-debup list
+dbp list
 ```
 **Remove a tracked repository**
 ```bash
-debup remove <package-name>
+dbp remove <package-name>
 ```
 
 ### Package Updates/Upgrade
 **Download and upgrade tracked packages with confirmation**
 ```bash
-debup upgrade 
+dbp upgrade 
 ```
 skip confirmation
 ```bash
-debup upgrade
+dbp upgrade
 ```
 ## 🔍 Discover, Search & Install Packages (`debup search`) 
 
 Find & discover any GitHub project providing .deb packages compatible with your architecture and install it in one click:
 ```bash
-debup search <keyword>
+dbp search <keyword>
 ```
 ### Example: debup search fastfetch
 **How it works:**
@@ -143,7 +143,7 @@ Enter the package number from the list and press Enter. debup downloads the matc
 
 ---
 >|
->**💡 Tip:** Combine official repos and GitHub releases by aliasing `sudo apt update && sudo apt upgrade -y && debup upgrade` in your `~/.bashrc`.
+>**💡 Tip:** Combine official repos and GitHub releases by aliasing `sudo apt update && sudo apt upgrade -y && dbp upgrade` in your `~/.bashrc`.
 >|
 ---
 
@@ -169,7 +169,7 @@ Enter the package number from the list and press Enter. debup downloads the matc
 ## 🗑️ Uninstallation
 **Remove package sudo**
 ```bash
-debup remove debup [-y]
+dbp remove debup [-y]
 ```
 Prompted for purge configuration or not.
 
