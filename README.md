@@ -34,8 +34,13 @@ debup <img src="https://api.iconify.design/lucide:package-check.svg?color=%23d70
 No PPAs, no bloated sandboxes, no third-party repositories - just native `.deb` binaries fetched straight from upstream.
 
 ---
+<div align="center">
+  
+|&nbsp; [Usage](https://github.com/Ruraam/debup/tree/main#%EF%B8%8F-usage) &nbsp;|&nbsp; [Configure a GitHub Token](https://github.com/Ruraam/debup#-configure-a-github-token-debup-auth) &nbsp;|&nbsp; [Discover, Search & Install Packages](https://github.com/Ruraam/debup#-discover-search--install-packages-debup-search) &nbsp;|&nbsp; [Highlights](https://github.com/Ruraam/debup#-highlights) &nbsp;|&nbsp; [Uninstallation](https://github.com/Ruraam/debup#%EF%B8%8F-uninstallation)&nbsp; |
 
-&nbsp;&nbsp; &nbsp; &nbsp; [Usage](https://github.com/Ruraam/debup#%EF%B8%8F-usage) &nbsp;|&nbsp; [Configure a GitHub Token](https://github.com/Ruraam/debup#-configure-a-github-token-debup-auth) &nbsp;|&nbsp; [Discover, Search & Install Packages](https://github.com/Ruraam/debup#-discover-search--install-packages-debup-search) &nbsp;|&nbsp; [Highlights](https://github.com/Ruraam/debup#-highlights) &nbsp;|&nbsp; [Uninstallation](https://github.com/Ruraam/debup#%EF%B8%8F-uninstallation) &nbsp;|&nbsp; [Screenshoots](https://github.com/Ruraam/debup#screenshoots)  &nbsp;|&nbsp; [License](https://github.com/Ruraam/debup/blob/main/LICENSE)
+|&nbsp; [Screenshoots](https://github.com/Ruraam/debup#screenshoots)  &nbsp;|&nbsp; [License](https://github.com/Ruraam/debup/blob/main/LICENSE)&nbsp; |
+
+</div>
 
 ---
 
