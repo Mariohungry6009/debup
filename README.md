@@ -30,7 +30,7 @@ debup <img src="https://api.iconify.design/lucide:package-check.svg?color=%23d70
 
 </p> 
 
-**debup** is a lightweight, zero-bloat CLI package manager for Debian and Ubuntu-based systems. Inspired by Android's **Obtainium**, it search, tracks, installs, and updates `.deb` packages directly from official **GitHub Releases** on **all architectures**.
+**debup** is a lightweight, zero-bloat CLI package manager for Debian and Ubuntu-based systems. Inspired by Android's **Obtainium**, it search, tracks, installs, and updates `.deb` packages directly from official **GitHub Releases** on **all architectures** via APT.
 
 No PPAs, no bloated sandboxes, no third-party repositories - just native `.deb` binaries fetched straight from upstream.
 
