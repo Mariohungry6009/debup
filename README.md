@@ -100,7 +100,7 @@ Paste your token and confirm. That's it!
 ## 🛠️ Usage
 
 ### Package Management
-**Add a repository to track:**
+**Add a repository to install `.deb` & track:**
 ```bash
 debup add <owner>/<repo>
 ```
