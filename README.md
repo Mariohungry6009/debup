@@ -1,12 +1,14 @@
 <div align="center">
 <img src="https://api.iconify.design/lucide:package-check.svg?color=%23d70a53&width=130&height=130" alt="debup logo" />
 <h1 >debup</h1>
-<strong>The Obtainium-like CLI package manager for Debian/Ubuntu-based distributions, WSL, Android Linux Terminal.</strong><br>
+<p><strong>The Obtainium-like CLI package manager for Debian/Ubuntu-based distributions, WSL, Android Linux Terminal.</strong>
 </p>
-<strong><p>Search, discover, track, install, and upgrade <code>.deb</code> packages directly from GitHub Releases via <strong>APT</strong>.</p>
-<strong>No PPAs, no bloated sandboxes, no third-party repositories - just native `.deb` binaries fetched straight from upstream.</strong>
-
+<p><strong>Search, discover, track, install, and upgrade <code>.deb</code> packages directly from GitHub Releases via <strong>APT</strong>.
+</p>
+<p><strong>No PPAs, no bloated sandboxes, no third-party repositories - just native `.deb` binaries fetched straight from upstream.</strong>
+</p>
 </div>
+
 <div>
 &nbsp; 
 </div>
@@ -28,6 +30,7 @@
 <div>
 <h1 > </h1>
 </div>
+
 <div align="center">
   
 |&nbsp; [Usage](https://github.com/Ruraam/debup/tree/main#%EF%B8%8F-usage) &nbsp;|&nbsp; [Configure a GitHub Token](https://github.com/Ruraam/debup#-configure-a-github-token-debup-auth) &nbsp;|&nbsp; [Discover, Search & Install Packages](https://github.com/Ruraam/debup#-discover-search--install-packages-debup-search) &nbsp;|&nbsp; [Highlights](https://github.com/Ruraam/debup#-highlights) &nbsp;|&nbsp; [Uninstallation](https://github.com/Ruraam/debup#%EF%B8%8F-uninstallation)&nbsp; |
