@@ -126,7 +126,7 @@ skip confirmation
 ```bash
 debup upgrade
 ```
-## 🔍 Search & Install Packages (`debup search`) 
+## 🔍 Discover, Search & Install Packages (`debup search`) 
 
 Find any GitHub project providing .deb packages compatible with your architecture and install it in one click:
 ```bash
