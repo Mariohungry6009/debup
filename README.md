@@ -40,7 +40,7 @@ No PPAs, no bloated sandboxes, no third-party repositories - just native `.deb` 
 **First installation : One-command for latest release.**
 
 ```bash
-curl -fsSL https://github.com/Ruraam/debup/releases/latest/download/debup_3.0.0_all.deb -o /tmp/debup.deb && sudo apt-get install -y /tmp/debup.deb && rm -f /tmp/debup.deb
+curl -fsSL https://github.com/Ruraam/debup/releases/latest/download/debup_3.1.0_all.deb -o /tmp/debup.deb && sudo apt-get install -y /tmp/debup.deb && rm -f /tmp/debup.deb
 ```
 ## 🛠️ Build it yourself from source
 
