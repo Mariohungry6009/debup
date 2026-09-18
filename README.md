@@ -1,26 +1,29 @@
-<p align="center">
+<div align="center">
 <img src="https://api.iconify.design/lucide:package-check.svg?color=%23d70a53&width=130&height=130" alt="debup logo" />
 </p>
-
-<h1 align="center">debup</h1>
-
-<p align="center">
+<h1 >debup</h1>
 <strong>The Obtainium-like CLI package manager for Debian/Ubuntu-based distributions, WSL, Android Linux Terminal.</strong><br>
-Search, discover, track, install, and upgrade <code>.deb</code> packages directly from GitHub Releases via APT.
 </p>
+<strong><p>Search, discover, track, install, and upgrade <code>.deb</code> packages directly from GitHub Releases via <strong>APT</strong>.</p>
+</p>
+</div>
+<div>
+<h1 > </h1>
+</div>
 
-<p align="center">
+<div align="center">
 <a href="LICENSE"><img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="GPL v3"></a> &nbsp;
 <a href="https://debian.org"><img src="https://img.shields.io/badge/Platform-Debian%20%7C%20Ubuntured.svg" alt="Platform"></a> &nbsp;
 <a href="#"><img src="https://img.shields.io/badge/Arch-all%20(any)-orange.svg" alt="Arch"></a> &nbsp;
 <a href="https://www.gnu.org/software/bash/"><img src="https://img.shields.io/badge/Language-Bash-4EAA25.svg" alt="Bash"></a>
 </p>
-
-<p align="center">
+</div>
+<div align="center">
 <a href="https://github.com/Uraam/debup/releases"><img src="https://img.shields.io/github/v/release/Uraam/debup?color=brightgreen" alt="Release"></a> &nbsp;
 <a href="#"><img src="https://img.shields.io/badge/Package_Size-3.41_Ko-success.svg" alt="Size"></a> &nbsp;
 <a href="https://github.com/Uraam/debup/releases"><img src="https://img.shields.io/github/downloads/Uraam/debup/total?color=blueviolet" alt="Total Downloads"></a>
 </p>
+</div>
 
 ---
 
@@ -33,7 +36,9 @@ debup <img src="https://api.iconify.design/lucide:package-check.svg?color=%23d70
 
 No PPAs, no bloated sandboxes, no third-party repositories - just native `.deb` binaries fetched straight from upstream.
 
----
+<div>
+<h1 > </h1>
+</div>
 <div align="center">
   
 |&nbsp; [Usage](https://github.com/Ruraam/debup/tree/main#%EF%B8%8F-usage) &nbsp;|&nbsp; [Configure a GitHub Token](https://github.com/Ruraam/debup#-configure-a-github-token-debup-auth) &nbsp;|&nbsp; [Discover, Search & Install Packages](https://github.com/Ruraam/debup#-discover-search--install-packages-debup-search) &nbsp;|&nbsp; [Highlights](https://github.com/Ruraam/debup#-highlights) &nbsp;|&nbsp; [Uninstallation](https://github.com/Ruraam/debup#%EF%B8%8F-uninstallation)&nbsp; |
@@ -167,6 +172,8 @@ Enter the package number from the list and press Enter. debup downloads the matc
 
 **Github Token is stored in:** `/etc/debup/debup.conf`
 
+---
+
 ## 🗑️ Uninstallation
 **Remove package sudo**
 ```bash
@@ -182,6 +189,9 @@ sudo apt remove debup
 ```bash
 sudo apt --purge debup
 ```
+
+---
+
 ## Screenshoots
 <p align="center">
 <img src="/assets/debup_1.png" width="400"> <img src="/assets/debup_2.png" width="400"> <img src="/assets/debup3.png" width="400"> <img src="/assets/debup4.png" width="400"></p>
