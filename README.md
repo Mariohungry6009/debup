@@ -28,11 +28,14 @@ Search, discover, track, install, and upgrade <code>.deb</code> packages directl
 debup <img src="https://api.iconify.design/lucide:package-check.svg?color=%23d70a53&width=30&height=30" alt="debup logo" style="vertical-align: middle;"/>
 </h1>
 
-</p> 
 
 **debup** is a lightweight, zero-bloat CLI package manager for Debian and Ubuntu-based systems. Inspired by Android's **Obtainium**, it search, tracks, installs, and updates `.deb` packages directly from official **GitHub Releases** on **all architectures** via APT.
 
 No PPAs, no bloated sandboxes, no third-party repositories - just native `.deb` binaries fetched straight from upstream.
+
+---
+
+&nbsp;&nbsp; &nbsp; &nbsp; [Usage](https://github.com/Ruraam/debup#%EF%B8%8F-usage) &nbsp;|&nbsp; [Configure a GitHub Token](https://github.com/Ruraam/debup#-configure-a-github-token-debup-auth) &nbsp;|&nbsp; [Discover, Search & Install Packages](https://github.com/Ruraam/debup#-discover-search--install-packages-debup-search) &nbsp;|&nbsp; [Highlights](https://github.com/Ruraam/debup#-highlights) &nbsp;|&nbsp; [Uninstallation](https://github.com/Ruraam/debup#%EF%B8%8F-uninstallation) &nbsp;|&nbsp; [Screenshoots](https://github.com/Ruraam/debup#screenshoots)  &nbsp;|&nbsp; [License](https://github.com/Ruraam/debup/blob/main/LICENSE)
 
 ---
 
@@ -134,7 +137,7 @@ debup search <keyword>
 Enter the package number from the list and press Enter. debup downloads the matching .deb, installs it via apt, and automatically adds it to your tracking list for future updates.
 
 <p align="center">
-<img src="/assets/debup_search.png" width="200"></p>
+<img src="/assets/debup_search1.png" width="200"> <img src="/assets/debup_search2.png" width="200"> <img src="/assets/debup_search3.png" width="200"></p>
 
 ---
 >|
