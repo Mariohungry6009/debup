@@ -118,7 +118,7 @@ debup remove <package-name>
 ```
 
 ### Package Updates/Upgrade
-**Download and upgrade tracked packages with onfirmation**
+**Download and upgrade tracked packages with confirmation**
 ```bash
 debup upgrade 
 ```
