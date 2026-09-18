@@ -148,8 +148,21 @@ printf "%b\n" "${GREEN}[✓] Package is already up to date!${NC}"
 return 0
 fi
 
+local arch_regex="$ARCH|all"
+if [ "$ARCH" = "amd64" ]; then
+arch_regex="amd64|x86_64|x86-64|x64|all"
+elif [ "$ARCH" = "arm64" ]; then
+arch_regex="arm64|aarch64|arm-64|armv8|arm64v8|all"
+fi
+
 local candidate_urls
-candidate_urls=$(echo "$release_json" | jq -r --arg arch "$ARCH" '.assets[] | select((.name | endswith(".deb")) and (.name | test($arch + "|all"; "i"))) | .browser_download_url')
+candidate_urls=$(echo "$release_json" | jq -r --arg arch "$arch_regex" '.assets[] | select((.name | endswith(".deb")) and (.name | test($arch; "i"))) | .browser_download_url')
+
+if [ "$ARCH" = "amd64" ]; then
+candidate_urls=$(echo "$candidate_urls" | grep -ivE "arm|aarch")
+elif [ "$ARCH" = "arm64" ]; then
+candidate_urls=$(echo "$candidate_urls" | grep-ivE "x86|amd64|i386|i686")
+fi
 
 local deb_url=""
 if [ -n "$candidate_urls" ]; then
@@ -157,16 +170,6 @@ deb_url=$(echo "$candidate_urls" | grep -i "$DISTRO_PREF" | head -n1)
 if [ -z "$deb_url" ]; then
 deb_url=$(echo "$candidate_urls" | head -n1)
 fi
-fi
-
-if [ -z "$deb_url" ] || [ "$deb_url" = "null" ]; then
-deb_url=$(echo "$release_json" | jq -r '.assets[] | select(.name | test("\\.deb$")) | .browser_download_url' | head -n1)
-fi
-
-if [ -z "$deb_url" ] || [ "$deb_url" = "null" ]; then
-printf "%b\n" "${BLUE}---------------------------------------${NC}"
-printf "%b\n" "${RED}[!] New version found (${latest_tag}), but no suitable .deb asset is available.${NC}"
-return 1
 fi
 
 if [ "$ASSUME_YES" != "true" ]; then
@@ -288,18 +291,24 @@ echo -e "${CYAN}Cannot install via debup.${NC}"
 return 1
 fi
 
-local matching_deb
-matching_deb=$(echo "$deb_assets" | grep -iE "(${ARCH}|all|_all)")
+local search_arch_regex="$ARCH|all"
+if [ "$ARCH" = "amd64" ]; then
+search_arch_regex="amd64|x86_64|x86-64|x64|all"
+elif [ "$ARCH" = "arm64" ]; then
+search_arch_regex="arm64|aarch64|arm-64|armv8|arm64v8|all"
+fi
 
-if [ -n "$matching_deb" ]; then
-local pref_deb
-pref_deb=$(echo "$matching_deb" | grep -i "$DISTRO_PREF" | head -n1)
-matching_deb="${pref_deb:-$(echo "$matching_deb" | head -n1)}"
+local matching_deb
+matching_deb=$(echo "$deb_assets" | grep -iE "(${search_arch_regex})")
+if [ "$ARCH" = "amd64" ]; then
+matching_deb=$(echo "$matching_deb"| grep -ivE "arm|aarch")
+elif [ "$ARCH" = "arm64" ]; then
+matching_deb=$(echo "$matching_deb" | grep -ivE "x86|amd64|i386|i686")
 fi
 
 if [ -z "$matching_deb" ]; then
 echo -e "${YELLOW}[!] Warning: .deb packages exist, but none seem to match your architecture ($ARCH).${NC}"
-read -rp "Do you still want to proceed with the installation?[y/N]: " force_install
+read -rp "Do you still want to proceed with the installation? [y/N]: " force_install
 if [[ ! "$force_install" =~ ^[yY]$ ]]; then
 echo -e "${CYAN}Installation cancelled.${NC}"
 return 0
