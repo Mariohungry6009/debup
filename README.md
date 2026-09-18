@@ -1,11 +1,11 @@
 <div align="center">
 <img src="https://api.iconify.design/lucide:package-check.svg?color=%23d70a53&width=130&height=130" alt="debup logo" />
-</p>
 <h1 >debup</h1>
 <strong>The Obtainium-like CLI package manager for Debian/Ubuntu-based distributions, WSL, Android Linux Terminal.</strong><br>
 </p>
 <strong><p>Search, discover, track, install, and upgrade <code>.deb</code> packages directly from GitHub Releases via <strong>APT</strong>.</p>
-</p>
+<strong>No PPAs, no bloated sandboxes, no third-party repositories - just native `.deb` binaries fetched straight from upstream.</strong>
+
 </div>
 <div>
 &nbsp; 
@@ -24,18 +24,6 @@
 <a href="https://github.com/Uraam/debup/releases"><img src="https://img.shields.io/github/downloads/Uraam/debup/total?color=blueviolet" alt="Total Downloads"></a>
 </p>
 </div>
-
----
-
-<h1>
-debup <img src="https://api.iconify.design/lucide:package-check.svg?color=%23d70a53&width=30&height=30" alt="debup logo" style="vertical-align: middle;"/>
-</h1>
-
-
-<div align="center">
-**debup** is a lightweight, zero-bloat CLI package manager for Debian and Ubuntu-based systems. Inspired by Android's **Obtainium**, it search, tracks, installs, and updates `.deb` packages directly from official **GitHub Releases** on **all architectures** via APT.
-
-No PPAs, no bloated sandboxes, no third-party repositories - just native `.deb` binaries fetched straight from upstream.
 
 <div>
 <h1 > </h1>
