@@ -89,7 +89,7 @@ Go to GitHub > Settings > Developer settings > Personal access tokens > Tokens (
 
 **2.Link it to debup:**
 ```bash
-debup auth
+dbp auth
 ```
 Paste your token and confirm. That's it!
 
