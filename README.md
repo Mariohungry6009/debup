@@ -73,10 +73,6 @@ Via dpkg:
 sudo dpkg -i debup.deb
 ```
 
-To uninstall cleanly later:
-```bash
-sudo apt remove --purge debup
-```
 ---
 
 ### 🔑 Configure a GitHub Token (`debup auth`)
