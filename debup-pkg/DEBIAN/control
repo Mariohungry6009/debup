@@ -1,9 +1,10 @@
 Package: debup
-Version: 3.0.0
+Version: 3.1.0
 Section: utils
 Priority: optional
 Architecture: all
 Maintainer: Ruraam <contact@github.com>
 Depends: bash (>= 4.0), curl, jq
-Description: A command-line (CLI) DEB package manager for Debian/Ubuntu-based distributions.
- Add a Git repository, check for new versions, and perform updates or installations via APT.
+Description: A command-line (CLI) DEB package manager for Github Releases,
+ Search, discover, add a Git repository, check for new versions,
+ and perform updates or installations via APT.
