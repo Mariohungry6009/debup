@@ -6,7 +6,7 @@
 
 <p align="center">
 <strong>The Obtainium-like CLI package manager for Debian/Ubuntu-based distributions, WSL, Android Linux Terminal.</strong><br>
-Search, discover, track, install, and upgrade <code>.deb</code> packages directly from GitHub Releases.
+Search, discover, track, install, and upgrade <code>.deb</code> packages directly from GitHub Releases via APT.
 </p>
 
 <p align="center">
