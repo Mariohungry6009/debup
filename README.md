@@ -128,7 +128,7 @@ debup upgrade
 ```
 ## 🔍 Discover, Search & Install Packages (`debup search`) 
 
-Find any GitHub project providing .deb packages compatible with your architecture and install it in one click:
+Find & discover any GitHub project providing .deb packages compatible with your architecture and install it in one click:
 ```bash
 debup search <keyword>
 ```
