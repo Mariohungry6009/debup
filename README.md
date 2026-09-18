@@ -37,7 +37,7 @@ No PPAs, no bloated sandboxes, no third-party repositories - just native `.deb` 
 ---
 
 ## ⚡ Quick First Install
-**One-command for latest release installation:**
+**First installation : One-command for latest release.**
 
 ```bash
 curl -s https://api.github.com/repos/Ruraam/debup/releases/latest \
