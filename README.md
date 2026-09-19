@@ -46,15 +46,15 @@ debup (`dbp`) — The Missing Bridge Between GitHub & APT
 
 ✨ Core Features
 
-•🔍 Discover (`debup search <query>`) : Find tools and applications directly on GitHub without leaving your terminal, pre-filtered for Debian-compatible repositories.
+•🔍 Discover (`dbp search <query>`) : Find tools and applications directly on GitHub without leaving your terminal, pre-filtered for Debian-compatible repositories.
 
-•📦 Direct Add (`debup add <owner/repo>`) : Noneed to hunt down release URLs. Point to any repository, and debup detects, matches your architecture (amd64 / arm64), downloads, and installs the right .deb.
+•📦 Direct Add (`dbp add <owner/repo>`) : Noneed to hunt down release URLs. Point to any repository, and debup detects, matches your architecture (amd64 / arm64), downloads, and installs the right .deb.
 
-•ℹ️ Inspect(`debup info <owner/repo>`) : Preview metadata before touching your system (stars, license, description, latest release, asset architecture compatibility).
+•ℹ️ Inspect(`dbp info <owner/repo>`) : Preview metadata before touching your system (stars, license, description, latest release, asset architecture compatibility).
 
 •🔄 Native APT Lifecycle : Seamlessly install, update (debup upgrade), and remove (debup remove) tracked packages using your system's native apt engine.
 
-•⚡High-Rate API Tracking (`debup set-token`) : Securely store a personal GitHub token (chmod 600) to unlock 5,000 req/h for heavy searches and automated background update checks.
+•⚡High-Rate API Tracking (`dbp auth`) : Securely store a personal GitHub token (chmod 600) to unlock 5,000 req/h for heavy searches and automated background update checks.
 
 ---
 
