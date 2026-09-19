@@ -33,11 +33,28 @@
 
 <div align="center">
   
-|&nbsp; [Usage](https://github.com/Ruraam/debup/tree/main#%EF%B8%8F-usage) &nbsp;|&nbsp; [Configure a GitHub Token](https://github.com/Ruraam/debup#-configure-a-github-token-debup-auth) &nbsp;|&nbsp; [Discover, Search & Install Packages](https://github.com/Ruraam/debup#-discover-search--install-packages-debup-search) &nbsp;|&nbsp; [Highlights](https://github.com/Ruraam/debup#-highlights) &nbsp;|&nbsp; [Uninstallation](https://github.com/Ruraam/debup#%EF%B8%8F-uninstallation)&nbsp; |
+|&nbsp; [Usage](https://github.com/Ruraam/debup/tree/main#%EF%B8%8F-usage) &nbsp;|&nbsp; [Configure a GitHub Token](https://github.com/Ruraam/debup#-configure-a-github-token-debup-auth) &nbsp;|&nbsp; [Discover, Search & Install Packages](https://github.com/Ruraam/debup#-discover-search--install-packages-debup-search) &nbsp;|&nbsp; [Uninstallation](https://github.com/Ruraam/debup#%EF%B8%8F-uninstallation)&nbsp; |
 
 |&nbsp; [Screenshoots](https://github.com/Ruraam/debup#screenshoots)  &nbsp;|&nbsp; [License](https://github.com/Ruraam/debup/blob/main/LICENSE)&nbsp; |
 
 </div>
+
+---
+debup (`dbp`) — The Missing Bridge Between GitHub & APT
+
+**Discover, inspect, install, and update Debian packages directly from GitHub Releases with the simplicity of `apt`.**
+
+✨ Core Features
+
+•🔍 Discover (`debup search <query>`) : Find tools and applications directly on GitHub without leaving your terminal, pre-filtered for Debian-compatible repositories.
+
+•📦 Direct Add (`debup add <owner/repo>`) : Noneed to hunt down release URLs. Point to any repository, and debup detects, matches your architecture (amd64 / arm64), downloads, and installs the right .deb.
+
+•ℹ️ Inspect(`debup info <owner/repo>`) : Preview metadata before touching your system (stars, license, description, latest release, asset architecture compatibility).
+
+•🔄 Native APT Lifecycle : Seamlessly install, update (debup upgrade), and remove (debup remove) tracked packages using your system's native apt engine.
+
+•⚡High-Rate API Tracking (`debup set-token`) : Securely store a personal GitHub token (chmod 600) to unlock 5,000 req/h for heavy searches and automated background update checks.
 
 ---
 
@@ -145,14 +162,6 @@ Enter the package number from the list and press Enter. debup downloads the matc
 >|
 >**💡 Tip:** Combine official repos and GitHub releases by aliasing `sudo apt update && sudo apt upgrade -y && dbp upgrade` in your `~/.bashrc`.
 >|
----
-
-## ✨ Highlights
-
-- **Native Workflow:** Standard `search`, `add`, `list`, `remove`, `update`, and `upgrade` syntax.
-- **Architecture Aware:** Automatically detects CPU architecture (`amd64`, `arm64`, `all`).
-- **Self-Updating:** Automatically tracks and updates it self via `debup upgrade`.
-- **Dependency Handling:** Leverages native `apt` under the hood to resolve package dependencies.
 
 ---
 
