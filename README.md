@@ -1,7 +1,7 @@
 <div align="center">
 <img src="https://api.iconify.design/lucide:package-check.svg?color=%23d70a53&width=130&height=130" alt="debup logo" />
 <h1 >debup</h1>
-<p><strong>The Obtainium-like CLI package manager for Debian/Ubuntu-based distributions, WSL, Android Linux Terminal.</strong>
+<p><strong>The AUR-like CLI package manager for Debian/Ubuntu-based distributions, WSL, Android Linux Terminal.</strong>
 </p>
 <p><strong>Search, discover, track, install, and upgrade <code>.deb</code> packages directly from GitHub Releases via <strong>APT</strong>.
 </p>
