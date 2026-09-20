@@ -35,7 +35,7 @@
   
 |&nbsp; [Usage](https://github.com/Ruraam/debup/tree/main#%EF%B8%8F-usage) &nbsp;|&nbsp; [Configure a GitHub Token](https://github.com/Ruraam/debup#-configure-a-github-token-debup-auth) &nbsp;|&nbsp; [Discover, Search & Install Packages](https://github.com/Ruraam/debup#-discover-search--install-packages-debup-search) &nbsp;|&nbsp; [Uninstallation](https://github.com/Ruraam/debup#%EF%B8%8F-uninstallation)&nbsp; |
 
-|&nbsp; [Screenshoots](https://github.com/Ruraam/debup#screenshoots)  &nbsp;|&nbsp; [License](https://github.com/Ruraam/debup/blob/main/LICENSE)&nbsp; |
+|&nbsp; [Screenshoots](https://github.com/Ruraam/debup#screenshoots)  &nbsp;|&nbsp; [License](https://github.com/Ruraam/debup/blob/main/LICENSE) &nbsp;|&nbsp; [Changelog in Releases](https://github.com/Ruraam/debup/releases)&nbsp; |
 
 </div>
 
