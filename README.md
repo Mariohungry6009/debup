@@ -9,6 +9,7 @@
 </p>
 </div>
 
+
 <div>
 &nbsp; 
 </div>
@@ -42,6 +43,7 @@
 ---
 debup (`dbp`) — The Missing Bridge Between GitHub & APT
 
+Missing the AUR convenience on Debian/Ubuntu? debup turns GitHub Releases into your personal rolling third-party repository.
 **Discover, inspect, install, and update Debian packages directly from GitHub Releases with the simplicity of `apt`.**
 
 ✨ Core Features
