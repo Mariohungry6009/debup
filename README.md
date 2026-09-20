@@ -135,7 +135,7 @@ dbp list
 dbp remove <package-name>
 ```
 
-## Package Updates/Upgrade
+### Package Updates/Upgrade
 **Download and upgrade tracked packages with confirmation**
 ```bash
 dbp upgrade 
@@ -152,19 +152,19 @@ dbp pin <package-name>
 ```bash
 dbp unpin <package-name>
 ```
-## 🔍 Discover, Search & Install Packages (`debup search`) 
+### 🔍 Discover, Search & Install Packages (`debup search`) 
 
 Find & discover any GitHub project providing .deb packages compatible with your architecture and install it in one click:
 Search informations on a repository:
 ```bash
 dbp info <owner>/repo>
 ```
-# Exemple: dbp info fastfetch-cli/fastfetch
+##### Exemple: dbp info fastfetch-cli/fastfetch
 
 ```bash
 dbp search <keyword>
 ```
-# Example: debup search fastfetch
+##### Example: debup search fastfetch
 **How it works:**
 
 Enter the package number from the list and press Enter. debup downloads the matching .deb, installs it via apt, and automatically adds it to your tracking list for future updates.
