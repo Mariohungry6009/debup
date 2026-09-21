@@ -168,7 +168,7 @@ Search informations on a repository:
 ```bash
 dbp info <owner>/<repo>
 ```
-##### Exemple: dbp info fastfetch-cli/fastfetch
+##### Example: dbp info fastfetch-cli/fastfetch
 
 ```bash
 dbp search <keyword>
