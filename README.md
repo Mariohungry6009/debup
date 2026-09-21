@@ -64,7 +64,7 @@ Missing the AUR convenience on Debian/Ubuntu? debup turns GitHub Releases into y
 **First installation : One-command for latest release.**
 
 ```bash
-curl -fsSL https://github.com/Ruraam/debup/releases/latest/download/debup_3.3.3_all.deb -o /tmp/debup.deb && sudo apt-get install -y /tmp/debup.deb && rm -f /tmp/debup.deb
+curl -fsSL https://github.com/Ruraam/debup/releases/latest/download/debup_3.3.1_all.deb -o /tmp/debup.deb && sudo apt-get install -y /tmp/debup.deb && rm -f /tmp/debup.deb
 ```
 ## 🛠️ Build it yourself from source
 
