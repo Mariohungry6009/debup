@@ -45,7 +45,7 @@ Missing the AUR convenience on Debian/Ubuntu? **debup** turns GitHub Releases in
 * 🔄 **Native APT Lifecycle** : Seamlessly install, update [`dbp upgrade`], and remove [`dbp remove`] tracked packages using your system's native APT engine.
 * ⚡ **High-Rate API Tracking**[`dbp token`] : Securely store a personal GitHub token (`chmod 600`) to unlock 5,000 req/h for heavy searches and automated background update checks.
 
-### 🛡️ Package Pinning (`apt-mark hold`)
+** 🛡️ Package Pinning** (`apt-mark hold`)
 
 * **Freeze package updates :** Lock specific packages to their current version using the `pin` (or `hold`) command to prevent unwanted updates.
 * **Unfreeze updates :** Restore automatic updates anytime with `unpin` (or `unhold`).
