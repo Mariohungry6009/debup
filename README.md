@@ -35,15 +35,15 @@
 
 ### debup (`dbp`) — The Missing Bridge Between GitHub & APT
 
-Missing the AUR convenience on Debian/Ubuntu?**debup** turns GitHub Releases into your personal rolling third-party repository.
+Missing the AUR convenience on Debian/Ubuntu? **debup** turns GitHub Releases into your personal rolling third-party repository.
 **Discover, inspect, install, and update Debian packages directly from GitHub Releases with the simplicity of `apt`.**
 
 ### ✨ Core Features
 
-*🔍 **Discover** [`dbp search <query>`] : Find tools and applications directly on GitHub without leaving your terminal, pre-filteredfor Debian-compatible repositories.
+*🔍 **Discover** [`dbp search <query>`] : Find tools and applications directly on GitHub without leaving your terminal, pre-filtered for Debian-compatible repositories.
 * 📦 **Direct Add** [`dbp add <owner/repo>`] :No need to hunt down release URLs. Point to any repository, and debup detects, matches your architecture (`amd64` / `arm64`), downloads, and installs the right `.deb`.
-* ℹ️ **Inspect**[`dbp info <owner/repo>`] : Preview metadata before touching your system (stars, license, description, latest release, asset architecture compatibility).
-* 🔄 **Native APT Lifecycle** : Seamlessly install, update [`dbp upgrade`], and remove [`dbp remove`]tracked packages using your system's native APT engine.
+* ℹ️ **Inspect** [`dbp info <owner/repo>`] : Preview metadata before touching your system (stars, license, description, latest release, asset architecture compatibility).
+* 🔄 **Native APT Lifecycle** : Seamlessly install, update [`dbp upgrade`], and remove [`dbp remove`] tracked packages using your system's native APT engine.
 * ⚡ **High-Rate API Tracking**[`dbp token`] : Securely store a personal GitHub token (`chmod 600`) to unlock 5,000 req/h for heavy searches and automated background update checks.
 
 ### 🛡️ Package Pinning (`apt-mark hold`)
