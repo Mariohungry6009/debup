@@ -125,6 +125,8 @@ Paste your token and confirm. That's it!
 
 `debup` will automatically detect and use it, boosting your limit to 5,000 requests per hour.
 
+> ***🔒 Security Note:** Your token is securely stored in `/etc/debup/debup.conf` with restricted permissions (`chmod600`), ensuring only root can read it.*
+
 ---
 
 ## 🛠️ Usage
