@@ -27,7 +27,7 @@
 
 | [Usage](https://github.com/Ruraam/debup/tree/main#%EF%B8%8F-usage) | [GitHub Token](https://github.com/Ruraam/debup/blob/main/README.md#-configure-a-github-token-optionnal--dbp-token-) | [Search & Install](https://github.com/Ruraam/debup/tree/main#-discover-search--install-packages--dbp-search) | [Uninstallation](https://github.com/Ruraam/debup/tree/main#%EF%B8%8F-uninstallation) |
 | :---: | :---: | :---: | :---: |
-| [Configuration](https://github.com/Ruraam/debup/blob/main/README.md#%EF%B8%8F-configuration) | [Screenshots](https://github.com/Ruraam/debup/tree/main#screenshoots) | [Changelog](https://github.com/Ruraam/debup/releases) | [License](LICENSE) |
+| [Configuration](https://github.com/Ruraam/debup/blob/main/README.md#%EF%B8%8F-configuration) | [Screenshots](https://github.com/Ruraam/debup/tree/main#screenshots) | [Changelog](https://github.com/Ruraam/debup/releases) | [License](LICENSE) |
 </div>
 
 ---
@@ -92,7 +92,7 @@ dpkg-deb --build --root-owner-group debup-pkg debup.deb
 ```
 4. **Install it:**
 
-Via Apt (recommended for dependancies):
+Via Apt (recommended for dependencies):
 ```bash
 sudo apt install -y ./debup.deb
 ```
@@ -105,7 +105,7 @@ sudo dpkg -i debup.deb
 
 ---
 
-### 🔑 Configure a GitHub Token (optionnal) [ `dbp token` ]
+### 🔑 Configure a GitHub Token (optional) [ `dbp token` ]
 
 By default, GitHub limits anonymous requests to 60 requests/hour. Adding a token increases this limit to 5000 requests/hour.
 
@@ -114,7 +114,7 @@ Go to GitHub > Settings > Developer settings > Personal access tokens > Tokens (
 
 **2.Link it to debup:**
 ```bash
-dbp auth
+dbp token
 ```
 Paste your token and confirm. That's it!
 
@@ -146,11 +146,7 @@ dbp remove <package-name>
 ### Package Updates/Upgrade
 **Download and upgrade tracked packages with confirmation**
 ```bash
-dbp upgrade 
-```
-skip confirmation
-```bash
-dbp upgrade
+dbp upgrade [-y]
 ```
 **Prevent an app from updating**
 ```bash
@@ -165,7 +161,7 @@ dbp unpin <package-name>
 Find & discover any GitHub project providing .deb packages compatible with your architecture and install it in one click:
 Search informations on a repository:
 ```bash
-dbp info <owner>/repo>
+dbp info <owner>/<repo>
 ```
 ##### Exemple: dbp info fastfetch-cli/fastfetch
 
@@ -215,7 +211,7 @@ sudo apt --purge debup
 
 ---
 
-## Screenshoots
+## Screenshots
 <p align="center">
 <img src="/assets/debup_1.png" width="400"> <img src="/assets/debup_2.png" width="400"> <img src="/assets/debup3.png" width="400"> <img src="/assets/debup4.png" width="400"></p>
 
