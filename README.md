@@ -63,6 +63,7 @@ Missing the AUR convenience on Debian/Ubuntu? debup turns GitHub Releases into y
 **•Freeze package updates:** Lock specific packages to their current version using the new pin (or hold) command to prevent unwanted updates.
 
 **•Unfreeze updates:** Restore automatic updates anytime with unpin (or unhold).
+
 •Native APT integration: Relies directly on Debian's standard apt-mark mechanism under the hood, ensuring 100% consistency with native APT tools.
 
 ---
