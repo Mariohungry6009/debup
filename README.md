@@ -43,17 +43,14 @@ Missing the AUR convenience on Debian/Ubuntu? **debup** turns GitHub Releases in
 * 📦 **Direct Add** [`dbp add <owner/repo>`] :No need to hunt down release URLs. Point to any repository, and debup detects, matches your architecture (`amd64` / `arm64`), downloads, and installs the right `.deb`.
 * ℹ️ **Inspect** [`dbp info <owner/repo>`] : Preview metadata before touching your system (stars, license, description, latest release, asset architecture compatibility).
 * 🔄 **Native APT Lifecycle** : Seamlessly install, update [`dbp upgrade`], and remove [`dbp remove`] tracked packages using your system's native APT engine.
-* ⚡ **High-Rate API Tracking**[`dbp token`] : Securely store a personal GitHub token (`chmod 600`) to unlock 5,000 req/h for heavy searches and automated background update checks.
+* ⚡ **High-Rate API Tracking** [`dbp token`] : Securely store a personal GitHub token (`chmod 600`) to unlock 5,000 req/h for heavy searches and automated background update checks.
 
-** 🛡️ Package Pinning** (`apt-mark hold`)
-
+**🛡️ Package Pinning** (`apt-mark hold`)
 * **Freeze package updates :** Lock specific packages to their current version using the `pin` (or `hold`) command to prevent unwanted updates.
 * **Unfreeze updates :** Restore automatic updates anytime with `unpin` (or `unhold`).
 * **Native APT integration :** Relies directly on Debian's standard `apt-mark` mechanism under the hood, ensuring 100% consistency with native system tools.
 
----
-
-### 🎯 Smart Asset Detection
+## 🎯 Smart Asset Detection
 
 `debup` automatically picks the right `.deb` binary from GitHub Releases without guesswork:
 
