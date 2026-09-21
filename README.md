@@ -53,6 +53,19 @@ Missing the AUR convenience on Debian/Ubuntu? **debup** turns GitHub Releases in
 
 ---
 
+### 🎯 Smart Asset Detection
+
+`debup` automatically picks the right `.deb` binary from GitHub Releases without guesswork:
+
+***Flexible Architectures:** Matches standard & alias names:
+* **x86_64:** `amd64`, `x86_64`, `x86-64`, `x64`, `all`
+* **ARM64:** `arm64`, `aarch64`, `armv8`, `arm64v8`, `all`
+* **Cross-Architecture Protection:** Actively filters out conflicting assets (e.g., prevents downloading `arm64` on `amd64` machines).
+* **Distro Prioritization:** Prefers distro-specific builds (`debian` vs `ubuntu`) when multiple compatible packages are published.
+* **Safe Fallback:** Cleanly aborts with an explicit warning if no compatible package exists for your CPU architecture.
+
+---
+
 ## ⚡Quick First Install
 **One-liner to install the latest release:**
 
