@@ -1,75 +1,61 @@
 <div align="center">
-<img src="https://api.iconify.design/lucide:package-check.svg?color=%23d70a53&width=130&height=130" alt="debup logo" />
-<h1 >debup</h1>
-<p><strong>The AUR-like CLI package manager for Debian/Ubuntu-based distributions, WSL, Android Linux Terminal.</strong>
-</p>
-<p><strong>Search, discover, track, install, and upgrade <code>.deb</code> packages directly from GitHub Releases via <strong>APT</strong>.
-</p>
-<p><strong>No PPAs, no bloated sandboxes, no third-party repositories - just native `.deb` binaries fetched straight from upstream.</strong>
-</p>
+<imgsrc="https://api.iconify.design/lucide:package-check.svg?color=%23d70a53&width=130&height=130" alt="debup logo" />
+<h1>debup</h1>
+<p><strong>The AUR-like CLI package manager for Debian/Ubuntu-based distributions, WSL, and Android Linux Terminals.</strong></p>
+<p>Search, discover, track, install, andupgrade <code>.deb</code> packages directly from GitHub Releases via <strong>APT</strong>.</p>
+<p><em>No PPAs, no bloated sandboxes, no third-party repositories — just native <code>.deb</code> binaries fetched straight from upstream.</em></p>
 </div>
 
-
-<div>
-&nbsp; 
-</div>
+<br/>
 
 <div align="center">
 <a href="LICENSE"><img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="GPL v3"></a> &nbsp;
-<a href="https://debian.org"><img src="https://img.shields.io/badge/Platform-Debian%20%7C%20Ubuntured.svg" alt="Platform"></a> &nbsp;
-<a href="#"><img src="https://img.shields.io/badge/Arch-all%20(any)-orange.svg" alt="Arch"></a> &nbsp;
+<a href="https://debian.org"><img src="https://img.shields.io/badge/Platform-Debian%20%7C%20Ubuntu-red.svg" alt="Platform"></a> &nbsp;
+<ahref="#"><img src="https://img.shields.io/badge/Arch-all%20(any)-orange.svg" alt="Arch"></a> &nbsp;
 <a href="https://www.gnu.org/software/bash/"><img src="https://img.shields.io/badge/Language-Bash-4EAA25.svg" alt="Bash"></a>
-</p>
 </div>
+
 <div align="center">
-<a href="https://github.com/Uraam/debup/releases"><img src="https://img.shields.io/github/v/release/Uraam/debup?color=brightgreen" alt="Release"></a> &nbsp;
+<a href="https://github.com/Ruraam/debup/releases"><img src="https://img.shields.io/github/v/release/Ruraam/debup?color=brightgreen" alt="Release"></a> &nbsp;
 <a href="#"><img src="https://img.shields.io/badge/Package_Size-3.41_Ko-success.svg" alt="Size"></a> &nbsp;
-<a href="https://github.com/Uraam/debup/releases"><img src="https://img.shields.io/github/downloads/Uraam/debup/total?color=blueviolet" alt="Total Downloads"></a>
-</p>
+<a href="https://github.com/Ruraam/debup/releases"><img src="https://img.shields.io/github/downloads/Ruraam/debup/total?color=blueviolet" alt="Total Downloads"></a>
 </div>
 
-<div>
-<h1 > </h1>
-</div>
+<br/>
 
 <div align="center">
-  
-|&nbsp; [Usage](https://github.com/Ruraam/debup/tree/main#%EF%B8%8F-usage) &nbsp;|&nbsp; [Configure a GitHub Token](https://github.com/Ruraam/debup#-configure-a-github-token-debup-auth) &nbsp;|&nbsp; [Discover, Search & Install Packages](https://github.com/Ruraam/debup#-discover-search--install-packages-debup-search) &nbsp;|&nbsp; [Uninstallation](https://github.com/Ruraam/debup#%EF%B8%8F-uninstallation)&nbsp; |
 
-|&nbsp; [Screenshoots](https://github.com/Ruraam/debup#screenshoots)  &nbsp;|&nbsp; [License](https://github.com/Ruraam/debup/blob/main/LICENSE) &nbsp;|&nbsp; [Changelog in Releases](https://github.com/Ruraam/debup/releases)&nbsp; |
+| [Usage](#%EF%B8%8F-usage) | [GitHub Token](#-configure-a-github-token-optional--dbp-token-) | [Search & Install](#-discover-search--install-packages-debup-search) | [Uninstallation](#%EF%B8%8F-uninstallation) |
+| :---: | :---: | :---: | :---: |
+| [Screenshots](#screenshots) |[License](LICENSE) | [Changelog](https://github.com/Ruraam/debup/releases) ||
 
 </div>
 
 ---
-debup (`dbp`) — The Missing Bridge Between GitHub & APT
 
-Missing the AUR convenience on Debian/Ubuntu? debup turns GitHub Releases into your personal rolling third-party repository.
+### debup (`dbp`) — The Missing Bridge Between GitHub & APT
+
+Missing the AUR convenience on Debian/Ubuntu?**debup** turns GitHub Releases into your personal rolling third-party repository.
 **Discover, inspect, install, and update Debian packages directly from GitHub Releases with the simplicity of `apt`.**
 
-✨ Core Features
+### ✨ Core Features
 
-•🔍 Discover [ `dbp search <query>` ]: Find tools and applications directly on GitHub without leaving your terminal, pre-filtered for Debian-compatible repositories.
+*🔍 **Discover** [`dbp search <query>`] : Find tools and applications directly on GitHub without leaving your terminal, pre-filteredfor Debian-compatible repositories.
+* 📦 **Direct Add** [`dbp add <owner/repo>`] :No need to hunt down release URLs. Point to any repository, and debup detects, matches your architecture (`amd64` / `arm64`), downloads, and installs the right `.deb`.
+* ℹ️ **Inspect**[`dbp info <owner/repo>`] : Preview metadata before touching your system (stars, license, description, latest release, asset architecture compatibility).
+* 🔄 **Native APT Lifecycle** : Seamlessly install, update [`dbp upgrade`], and remove [`dbp remove`]tracked packages using your system's native APT engine.
+* ⚡ **High-Rate API Tracking**[`dbp token`] : Securely store a personal GitHub token (`chmod 600`) to unlock 5,000 req/h for heavy searches and automated background update checks.
 
-•📦 Direct Add [ `dbp add <owner/repo>` ]: Noneed to hunt down release URLs. Point to any repository, and debup detects, matches your architecture (amd64 / arm64), downloads, and installs the right .deb.
+### 🛡️ Package Pinning (`apt-mark hold`)
 
-•ℹ️ Inspect [ `dbp info <owner/repo>` ]: Preview metadata before touching your system (stars, license, description, latest release, asset architecture compatibility).
-
-•🔄 Native APT Lifecycle : Seamlessly install, update [ `dbp upgrade` ], and remove [ `dbp remove` ] tracked packages using your system's native apt engine.
-
-•⚡High-Rate API Tracking [ `dbp token` ]: Securely store a personal GitHub token (chmod 600) to unlock 5,000 req/h for heavy searches and automated background update checks.
-
-🛡️ Package Pinning (apt-mark hold)
-
-**•Freeze package updates:** Lock specific packages to their current version using the new pin (or hold) command to prevent unwanted updates.
-
-**•Unfreeze updates:** Restore automatic updates anytime with unpin (or unhold).
-
-•Native APT integration: Relies directly on Debian's standard apt-mark mechanism under the hood, ensuring 100% consistency with native APT tools.
+* **Freeze package updates :** Lock specific packages to their current version using the `pin` (or `hold`) command to prevent unwanted updates.
+* **Unfreeze updates :** Restore automatic updates anytime with `unpin` (or `unhold`).
+* **Native APT integration :** Relies directly on Debian's standard `apt-mark` mechanism under the hood, ensuring 100% consistency with native system tools.
 
 ---
 
-## ⚡ Quick First Install
-**First installation : One-command for latest release.**
+## ⚡Quick First Install
+**One-liner to install the latest release:**
 
 ```bash
 curl -fsSL https://github.com/Ruraam/debup/releases/latest/download/debup_3.3.1_all.deb -o /tmp/debup.deb && sudo apt-get install -y /tmp/debup.deb && rm -f /tmp/debup.deb
