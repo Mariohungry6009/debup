@@ -50,7 +50,7 @@ Missing the AUR convenience on Debian/Ubuntu? **debup** turns GitHub Releases in
 * **Unfreeze updates :** Restore automatic updates anytime with `unpin` (or `unhold`).
 * **Native APT integration :** Relies directly on Debian's standard `apt-mark` mechanism under the hood, ensuring 100% consistency with native system tools.
 
-## 🎯 Smart Asset Detection
+### 🎯 Smart Asset Detection
 
 `debup` automatically picks the right `.deb` binary from GitHub Releases without guesswork:
 
