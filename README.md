@@ -37,7 +37,7 @@
 Missing the AUR convenience on Debian/Ubuntu? **debup** turns GitHub Releases into your personal rolling third-party repository.
 **Discover, inspect, install, and update Debian packages directly from GitHub Releases with the simplicity of `apt`.**
 
-### ✨ Core Features
+## ✨ Core Features
 
 *🔍 **Discover** [`dbp search <query>`] : Find tools and applications directly on GitHub without leaving your terminal, pre-filtered for Debian-compatible repositories.
 * 📦 **Direct Add** [`dbp add <owner/repo>`] :No need to hunt down release URLs. Point to any repository, and debup detects, matches your architecture (`amd64` / `arm64`), downloads, and installs the right `.deb`.
