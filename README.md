@@ -25,7 +25,7 @@
 
 <div align="center">
 
-| [Usage](#%EF%B8%8F-usage) | [GitHub Token](#-configure-a-github-token-optional--dbp-token-) | [Search & Install](#-discover-search--install-packages-debup-search) | [Uninstallation](#%EF%B8%8F-uninstallation) |
+| [Usage](https://github.com/Ruraam/debup/tree/main#%EF%B8%8F-usage) | [GitHub Token](https://github.com/Ruraam/debup/blob/main/README.md#-configure-a-github-token-optionnal--dbp-token-) | [Search & Install](https://github.com/Ruraam/debup/tree/main#-discover-search--install-packages--dbp-search) | [Uninstallation](https://github.com/Ruraam/debup/tree/main#%EF%B8%8F-uninstallation) |
 | :---: | :---: | :---: | :---: |
 | [Screenshots](#screenshots) |[License](LICENSE) | [Changelog](https://github.com/Ruraam/debup/releases) ||
 
