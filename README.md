@@ -99,7 +99,7 @@ sudo dpkg -i debup.deb
 
 ---
 
-### 🔑 Configure a GitHub Token (optionnal) [ `dbp - t` ]
+### 🔑 Configure a GitHub Token (optionnal) [ `dbp -t` ]
 
 By default, GitHub limits anonymous requests to 60 requests/hour. Adding a token increases this limit to 5000 requests/hour.
 
