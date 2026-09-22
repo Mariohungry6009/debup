@@ -97,8 +97,8 @@ echo "deb [signed-by=/etc/apt/keyrings/debup.gpg] https://ruraam.github.io/debup
 sudo apt update && sudo apt install debup
 ```
 
-### Option 2: Quick One-Liner (curl install script)
-*If you just want to run the installer directly:*
+### Option 2: Quick One-Liner
+*If you just want to run the deb package installation directly via curl and apt:*
 
 ```bash
 curl -fsSL https://github.com/Ruraam/debup/releases/latest/download/debup_3.3.1_all.deb -o /tmp/debup.deb && sudo apt-get install -y /tmp/debup.deb && rm -f /tmp/debup.deb
