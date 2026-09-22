@@ -6,46 +6,73 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
-  build-repo:
+  build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Download release assets (.deb)
+      - name: Install reprepro
+        run: sudo apt-get update && sudo apt-get install -y reprepro gpg
+
+      - name: Download release assets
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           mkdir -p debs
-          TAG="${{ github.event.release.tag_name }}" 
+          TAG="${{ github.event.release.tag_name }}"
           if [ -n "$TAG" ]; then
-          gh release download "TAG" --pattern "*.deb" --dir debs/
+            gh release download "$TAG" --pattern "*.deb"--dir debs/
+          else
+            gh release download --pattern "*.deb" --dir debs/
+          fi
 
-      - name: Setup APT repository with reprepro
-        uses: mathieu-bour/action-reprepro@v1
-        with:
-          origin: "debup"
-          label: "debup"
-          codename: "stable"
-          architectures: "amd64 arm64 all"
-          components: "main"
-          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
-          source_dir: "debs"
-          output_dir: "public"
-
-      - name: Add Public GPG key to repo
+      - name: Import GPG Key and build APT repository
+        env:
+          GPG_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
         run: |
-          echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --import
-          gpg --armor --export debup > public/debup.gpg
+          echo "$GPG_KEY" | gpg --batch --import
+          KEY_ID=$(gpg --list-secret-keys --with-colons |grep '^sec' | cut -d: -f5)
+          
+          mkdir -p public/conf
+          cat <<EOF> public/conf/distributions
+          Origin: debup
+          Label: debup
+          Codename: stable
+          Architectures: amd64 arm64 all
+          Components: main
+          Description: debup official repository
+          SignWith: $KEY_ID
+          EOF
+
+          cd public
+          for deb in ../debs/*.deb; do
+            [ -f "$deb" ]&& reprepro includedeb stable "$deb"
+          done
+
+          gpg --armor --export "debup Archive" > debup.gpg
+          touch .nojekyll
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './public'
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
-          publish_branch: gh-pages
+        id: deployment
+        uses: actions/deploy-pages@v4
