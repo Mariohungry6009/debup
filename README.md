@@ -77,34 +77,35 @@ Missing the AUR convenience on Debian/Ubuntu? **debup** turns GitHub Releases in
 ---
 
 ## 📦 Installation
-
 ### Option 1: APT Repository (Recommended)
-To install `debup` and receive automatic updates through APT:
+*To install `debup` and receive automatic updates through APT:*
 
-1. Create the keyrings directory
+1. **Create the keyrings directory**
 ```bash
 sudo install -m 0755 -d /etc/apt/keyrings
 ```
-2. Download and install the GPG signing key
+2. **Download and install the GPG signing key**
 ```bash
 sudo curl-fsSL https://ruraam.github.io/debup/debup.gpg -o /etc/apt/keyrings/debup.gpg
 ```
-3. Add the official debup repository
+3. **Add the official debup repository**
 ```bash
 echo "deb [signed-by=/etc/apt/keyrings/debup.gpg] https://ruraam.github.io/debup/ stable main" | sudo tee /etc/apt/sources.list.d/debup.list
 ```
-Install debup
-sudo apt update
-sudo apt install debup
+4. **Install debup**
+```bash
+sudo apt update && sudo apt install debup
+```
 
 ### Option 2: Quick One-Liner (curl install script)
-If you just want to run the installer directly:
+*If you just want to run the installer directly:*
+
 ```bash
 curl -fsSL https://github.com/Ruraam/debup/releases/latest/download/debup_3.3.1_all.deb -o /tmp/debup.deb && sudo apt-get install -y /tmp/debup.deb && rm -f /tmp/debup.deb
 ```
-## 🛠️ Build it yourself from source
 
-***If you prefer to inspect the source code and build the `.deb` package manually:***
+### 🛠️ Build it yourself from source
+*If you prefer to inspect the source code and build the `.deb` package manually:**
 
 1. **Clone the repository:**
 ```bash
