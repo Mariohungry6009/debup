@@ -160,46 +160,46 @@ Paste your token and confirm. That's it!
 ### Package Management
 **Add a repository to install `.deb` & track:**
 ```bash
-dbp -a | add <owner>/<repo>
+dbp add <owner>/<repo>
 ```
 for exemple:
 ```bash
-dbp -a fastfetch-cli/fastfetch
+dbp fastfetch-cli/fastfetch
 ```
 
 **List tracked repositories**
 ```bash
-dbp -l | list
+dbp list
 ```
 **Remove a tracked repository**
 ```bash
-dbp -r | remove <package-name>
+dbp remove <package-name>
 ```
 
 ### Package Updates/Upgrade
 **Download and upgrade tracked packages with confirmation**
 ```bash
-dbp -u | upgrade [-y]
+dbp upgrade [-y]
 ```
 **Prevent an app from updating**
 ```bash
-dbp -p | pin <package-name>
+dbp pin <package-name>
 ```
 **Allow an app to update again**
 ```bash
-dbp -n | unpin <package-name>
+dbp unpin <package-name>
 ```
 ### 🔍 Discover, Search & Install Packages [ `dbp search`] 
 
 Find & discover any GitHub project providing .deb packages compatible with your architecture and install it in one click:
 Search informations on a repository:
 ```bash
-dbp -i | info <owner>/<repo>
+dbp info <owner>/<repo>
 ```
 ##### Example: dbp info fastfetch-cli/fastfetch
 
 ```bash
-dbp -s | search <keyword>
+dbp search <keyword>
 ```
 ##### Example: [ `dbp search fastfetch`] 
 **How it works:**
