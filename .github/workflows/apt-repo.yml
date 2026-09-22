@@ -1,0 +1,51 @@
+name: Update APT Repository
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  build-repo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download release assets (.deb)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir -p debs
+          TAG="${{ github.event.release.tag_name }}" 
+          if [ -n "$TAG" ]; then
+          gh release download "TAG" --pattern "*.deb" --dir debs/
+
+      - name: Setup APT repository with reprepro
+        uses: mathieu-bour/action-reprepro@v1
+        with:
+          origin: "debup"
+          label: "debup"
+          codename: "stable"
+          architectures: "amd64 arm64 all"
+          components: "main"
+          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+          source_dir: "debs"
+          output_dir: "public"
+
+      - name: Add Public GPG key to repo
+        run: |
+          echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --import
+          gpg --armor --export debup > public/debup.gpg
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages
