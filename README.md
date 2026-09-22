@@ -164,7 +164,7 @@ dbp add <owner>/<repo>
 ```
 for exemple:
 ```bash
-dbp fastfetch-cli/fastfetch
+dbp -a fastfetch-cli/fastfetch
 ```
 
 **List tracked repositories**
