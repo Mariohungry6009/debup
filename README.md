@@ -160,46 +160,46 @@ Paste your token and confirm. That's it!
 ### Package Management
 **Add a repository to install `.deb` & track:**
 ```bash
-dbp add <owner>/<repo>
+dbp -a | add <owner>/<repo>
 ```
 for exemple:
 ```bash
-dbp add fastfetch-cli/fastfetch
+dbp -a fastfetch-cli/fastfetch
 ```
 
 **List tracked repositories**
 ```bash
-dbp list
+dbp -l | list
 ```
 **Remove a tracked repository**
 ```bash
-dbp remove <package-name>
+dbp -r | remove <package-name>
 ```
 
 ### Package Updates/Upgrade
 **Download and upgrade tracked packages with confirmation**
 ```bash
-dbp upgrade [-y]
+dbp -u | upgrade [-y]
 ```
 **Prevent an app from updating**
 ```bash
-dbp pin <package-name>
+dbp -p | pin <package-name>
 ```
 **Allow an app to update again**
 ```bash
-dbp unpin <package-name>
+dbp -n | unpin <package-name>
 ```
 ### 🔍 Discover, Search & Install Packages [ `dbp search`] 
 
 Find & discover any GitHub project providing .deb packages compatible with your architecture and install it in one click:
 Search informations on a repository:
 ```bash
-dbp info <owner>/<repo>
+dbp -i | info <owner>/<repo>
 ```
 ##### Example: dbp info fastfetch-cli/fastfetch
 
 ```bash
-dbp search <keyword>
+dbp -s | search <keyword>
 ```
 ##### Example: [ `dbp search fastfetch`] 
 **How it works:**
@@ -229,7 +229,7 @@ Enter the package number from the list and press Enter. debup downloads the matc
 ## 🗑️ Uninstallation
 **Remove package sudo**
 ```bash
-dbp remove debup [-y]
+dbp -r debup [-y]
 ```
 Prompted for purge configuration or not.
 
