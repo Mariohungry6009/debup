@@ -40,9 +40,11 @@ Missing the AUR convenience on Debian/Ubuntu? **debup** turns GitHub Releases in
 ## ✨ Core Features
 🔍 **Discover** [`dbp search <query>`] :
 * Find tools and applications directly on GitHub without leaving your terminal, pre-filtered for Debian-compatible repositories.
+* Supports release targeting during search & info inspections: fetch and query exact tags directly via GitHub API's `/releases/tags/...` endpoint.
 
 📦 **Direct Add** [`dbp add <owner/repo>`]:
 * No need to hunt down release URLs. Point to any repository, and debup detects, matches your architecture (`amd64` / `arm64`), downloads, and installs the right `.deb`.
+* Supports version pins on installation: `dbp -a owner/repo@vX.Y.Z`
 
 ℹ️ **Inspect** [`dbp info <owner/repo>`]:
 * Preview metadata before touching your system (stars, license, description, latest release, asset architecture compatibility).
@@ -52,6 +54,9 @@ Missing the AUR convenience on Debian/Ubuntu? **debup** turns GitHub Releases in
 
 ⚡ **High-Rate API Tracking** [`dbp token`]:
 * Securely store a personal GitHub token (`chmod 600`) to unlock 5,000 req/h for heavy searches and automated background update checks.
+
+**Native Bash completion**:
+* Autocompletion support for both `debup` and the `dbp` alias, featuring context-aware dynamic package suggestionsfor `remove`, `pin`, and `unpin`.
 
 **🛡️ Package Pinning** (`apt-mark hold`)
 * **Freeze package updates :** Lock specific packages to their current version using the `pin` (or `hold`) command to prevent unwanted updates.
