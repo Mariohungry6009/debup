@@ -86,7 +86,7 @@ sudo install -m 0755 -d /etc/apt/keyrings
 ```
 2. **Download and install the GPG signing key**
 ```bash
-sudo curl-fsSL https://ruraam.github.io/debup/debup.gpg -o /etc/apt/keyrings/debup.gpg
+sudo curl -fsSL https://ruraam.github.io/debup/debup.gpg -o /etc/apt/keyrings/debup.gpg
 ```
 3. **Add the official debup repository**
 ```bash
