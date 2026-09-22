@@ -62,7 +62,7 @@ jobs:
           Origin:debup
           Label: debup
           Codename: stable
-          Architectures: amd64 arm64 all
+          Architectures: amd64 arm64
           Components: main
           Description: debup official repository
           SignWith: $KEY_ID
